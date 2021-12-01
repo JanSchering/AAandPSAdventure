@@ -1,0 +1,21 @@
+{
+    "root": {
+        "type": "list",
+        "name": "root",
+        "message": "You shake your head 'Sorry kids, I don't have time for these games'. Just as you try to leave you see deep mists close in around you, swallowing up the village. As more buildings disappear into the mists, you are left with little choice but to seek refuge in the house.",
+        "choices": [
+            "Stay outside and try to find a way outside the mists",
+            "Seek refuge in the house"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1"
+            },
+            {
+                "chapter": "chapter1B",
+                "hook": "c1"
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "root": {
+        "type": "list",
+        "name": "root",
+        "message": "You nod. 'I see.. Well, I suppose there is no harm in helping you. I will find the monster for you'. Rose and Thorn smile at you with grateful eyes.",
+        "choices": [
+            "Enter the house"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1"
+            }
+        ]
+    }
+}
