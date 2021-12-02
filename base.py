@@ -6,7 +6,7 @@ from __future__ import print_function, unicode_literals
 import json
 from os import path, getcwd
 from whaaaaat import prompt
-from util import style
+from util import style, add_linesep
 
 question_dir = path.join(getcwd(), "questions")
 
@@ -17,6 +17,8 @@ with open(q_file) as f:
     cur = json.load(f)
 p = cur["root"]
 while True:
+    # basic pre-processing to ensure that the lines don't get overly long
+    p["message"] = add_linesep(p["message"], ".")
     ans = prompt(p, style=style)
     an_idx = p["choices"].index(ans[p["name"]])
     try:

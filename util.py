@@ -17,3 +17,10 @@ story_structure = {
 
     }
 }
+
+
+def add_linesep(str, indicator):
+    """
+    adds a line separator into the string at every spot the indicator occurs.
+    """
+    return str.replace(indicator, "{}\n".format(indicator))
