@@ -1,4 +1,5 @@
 from whaaaaat import style_from_dict, Token
+from enum import Enum
 
 style = style_from_dict({
     Token.Separator: '#6C6C6C',
@@ -11,11 +12,20 @@ style = style_from_dict({
 })
 
 
-story_structure = {
-    "root": {
-        "questions": "intro.json",
+class Keys(Enum):
+    CHECKP = "checkpoint"
+    RES = "responses"
+    CHOICES = "choices"
+    HOOK = "hook"
+    CHAP = "chapter"
+    MSG = "message"
+    NAME = "name"
 
-    }
+
+init_state = {
+    "chapter": "prelude",
+    "checkpoint": 0,
+    "items": []
 }
 
 
