@@ -1,5 +1,11 @@
 from whaaaaat import style_from_dict, Token
 from enum import Enum
+from os import path, getcwd, listdir, remove
+from datetime import datetime
+import json
+
+question_dir = path.join(getcwd(), "chapters")
+state_path = path.join(getcwd(), "saveStates")
 
 style = style_from_dict({
     Token.Separator: '#6C6C6C',
@@ -20,6 +26,9 @@ class Keys(Enum):
     CHAP = "chapter"
     MSG = "message"
     NAME = "name"
+    TYPE = "type"
+    CHR_NAME = "char_name"
+    ENDP = "endpoint"
 
 
 init_state = {
@@ -29,8 +38,25 @@ init_state = {
 }
 
 
-def add_linesep(str, indicator):
-    """
-    adds a line separator into the string at every spot the indicator occurs.
-    """
-    return str.replace(indicator, "{}\n".format(indicator))
+def handle_Checkpoint(state, chap_name, cur_sec):
+    print("CHECKPOINT REACHED")
+    state[Keys.CHAP.value] = chap_name
+    state[Keys.CHECKP.value] = cur_sec[Keys.CHECKP.value]
+    saveState_files = listdir(path.join(getcwd(), "saveStates"))
+    saveState_files.sort()
+    if len(saveState_files) == 3:
+        remove(path.join(state_path, saveState_files[-1]))
+    timestamp = datetime.now().strftime("%d-%m-%Y-%H-%M-%S")
+    with open(path.join(state_path, "{}.json".format(timestamp)), "w") as f:
+        state = init_state
+        json.dump(state, f)
+    return state
+
+
+def pre_process_msg(state, msg):
+    msg = msg.replace(".", "{}\n".format("."))
+    try:
+        msg = msg.replace("{char_name}", "{}".format(state["char_name"]))
+    except:
+        pass
+    return msg

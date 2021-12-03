@@ -2,147 +2,88 @@
     "root": {
         "type": "list",
         "name": "root",
-        "message": "You wake up, unsure of where you are exactly. You look around and see you are laying on a lonely gravel road.",
+        "message": "'Hey, you. You're finally awake. You were trying to cross the border right? Walked right into that Imperial ambush, same as us. Talos knows where they are bringing us with this caravan now. But it seems that this is our end'",
         "choices": [
-            "Get up and look around"
+            "Ask who you are",
+            "Ask why the imperials arrested you"
         ],
         "checkpoint": 0,
         "responses": [
             {
                 "chapter": "same",
-                "hook": "intro1"
+                "hook": "c1A"
+            },
+            {
+                "chapter": "same",
+                "hook": "c1B"
             }
         ]
     },
-    "intro1": {
-        "type": "list",
-        "name": "intro1",
-        "message": "The gravel road leads to a village, its tall houses dark as tombstones. Nestled among these solemn dwellings are a handful of closed-up shops. Even the tavern is shut tight. You hear a soft whimpering.",
-        "choices": [
-            "Find the source of the whimpering"
-        ],
+    "c1A": {
+        "type": "input",
+        "name": "char_name",
+        "message": "'First time I've seen you lad. Just choose a name, not that it matters much anymore'",
         "responses": [
             {
                 "chapter": "same",
-                "hook": "intro2"
+                "hook": "c2"
             }
         ]
     },
-    "intro2": {
-        "type": "list",
-        "name": "intro2",
-        "message": "When looking around for the soft whimpering you see a pair of children standing the in the middle of an otherwise lifeless street. They don't look older than 10, maybe even younger. You wonder where their parents could be?",
-        "choices": [
-            "Approach the children"
-        ],
+    "c1B": {
+        "type": "input",
+        "name": "char_name",
+        "message": "'Damn Tempestrobes. Midsky was fine until they came along. Empire was nice and lazy. Now that they are looking for them nobody is safe. Anyway lad, what's your name?'",
         "responses": [
             {
                 "chapter": "same",
-                "hook": "intro3"
+                "hook": "c2"
             }
         ]
     },
-    "intro3": {
+    "c2": {
         "type": "list",
-        "name": "intro3",
-        "message": "You approach the children. They look scared.",
+        "name": "c2",
+        "message": "'{char_name} huh? Well whatever, you-' [Hoof sounds from the sides. A group of armed horseback riders approaches the caravan you sit in]. 'Could that be Tempestrobes? If so it must be a gift of Talos, they could be our ticket out of here'",
         "choices": [
-            "Introduce yourself"
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "intro4"
-            }
-        ]
-    },
-    "intro4": {
-        "type": "list",
-        "name": "intro4",
-        "message": "You introduce yourself. The oldest looking child seems less scared now that you are here. She introduces herself as Rosavalda, but you may call her Rose. Her little brother, who she introduced as Thornboldt, or Thorn, was weeping while holding a stuffed doll. Both children look almost frighteningly thin, Rose hushed the boy before looking up at you, 'There's a monster in our house!'. She then points to a tall brick row house that has seen better days. Its windows are dark. It has gated portico on the ground floor, and the rusty gate is slightly ajar. The houses on the other side are abandoned, their windows and doors boarded up.",
-        "choices": [
-            "What does the monster look like?",
-            "You know where in the house the monster is?",
-            "Does someone else live here with you?",
+            "'I thought you hate them?'",
             "Say nothing"
         ],
         "responses": [
             {
                 "chapter": "same",
-                "hook": "intro5A"
+                "hook": "finalA"
             },
             {
                 "chapter": "same",
-                "hook": "intro5B"
-            },
-            {
-                "chapter": "same",
-                "hook": "intro5C"
-            },
-            {
-                "chapter": "same",
-                "hook": "final"
+                "hook": "finalB"
             }
         ]
     },
-    "intro5A": {
+    "finalA": {
         "type": "list",
-        "name": "intro5A",
-        "message": "'We don't know what the monster looks like, but we heard it's terrible howls' says Rose",
+        "name": "finalA",
+        "message": "'I didn't say that I want to marry 'em lad. I want them to get me out of here and then leave me be. [Sounds of steel clashing steel start roaring and screams fill the air. You feel the rope around your hands getting cut loose]",
         "choices": [
-            "Are you sure you are not just imagining the monster?"
+            "Start Running"
         ],
         "responses": [
             {
-                "chapter": "same",
-                "hook": "final"
-            }
-        ]
-    },
-    "intro5B": {
-        "type": "list",
-        "name": "intro5B",
-        "message": "'Our mommy and daddy keep the monster trapped in the basement.' says Rose",
-        "choices": [
-            "Are you sure you are not just imagining the monster?"
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "final"
-            }
-        ]
-    },
-    "intro5C": {
-        "type": "list",
-        "name": "intro5C",
-        "message": "'We also have a baby brother, Walter. He is in the third-floor nursery.' says Rose",
-        "choices": [
-            "Shouldn't you go inside to help care for Walter then? You probably just imagined the monster"
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "final"
-            }
-        ]
-    },
-    "final": {
-        "type": "list",
-        "name": "root",
-        "message": "'We won't go in the house if the monster is still there!' cries Rose",
-        "choices": [
-            "Don't help the children and leave",
-            "Help the children"
-        ],
-        "checkpoint": 1,
-        "responses": [
-            {
-                "chapter": "chapter1A",
+                "chapter": "intro",
                 "hook": "root"
-            },
+            }
+        ]
+    },
+    "finalB": {
+        "type": "list",
+        "name": "finalB",
+        "message": "[Sounds of steel clashing steel start roaring and screams fill the air. You feel the rope around your hands getting cut loose]",
+        "choices": [
+            "Start Running"
+        ],
+        "responses": [
             {
-                "chapter": "chapter1B",
+                "chapter": "intro",
                 "hook": "root"
             }
         ]
