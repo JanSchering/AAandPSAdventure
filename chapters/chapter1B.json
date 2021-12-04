@@ -12,5 +12,102 @@
                 "hook": "c1"
             }
         ]
+    },
+    "c1": {
+        "type": "list",
+        "name": "c1",
+        "message": "You look for an entrance to the house. You see a wrought-iron gate with hinges on one side and a lock on the other which fills the archway of a stone portico. The gate is unlocked and its rusty hinges shriek when the gate is opened. Oil lamps hang from the portico ceiling by chains, flanking a set of oaken doors that open into a grand foyer. Hanging on the south wall of the foyer is a shield emblazoned with a coat-of-arms in the shape of a windmill, flanked by framed portraits of stony-faced aristocrats. Mahogany-framed double doors leading to the main hall are set with panes of stained glass.",
+        "choices": [
+            "Enter the main hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2"
+            }
+        ]
+    },
+    "c2": {
+        "type": "list",
+        "name": "c2",
+        "message": "You enter the main hall. It is a width hall that runs the width of the house.",
+        "choices": [
+            "Look around"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c3"
+            }
+        ]
+    },
+    "c3": {
+        "type": "list",
+        "name": "c3",
+        "message": "Mounted on the wall above the fireplace is a longsword with a windmill cameo worked into the hilt. The wood-paneled walls are ornately sculptured with images of vines, flowers, nymphs, and satyrs. You also see a door.",
+        "choices": [
+            "Take the sword", 
+            "Enter through the door"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c5"
+            }
+        ]
+    },
+    "c4": {
+        "type": "list",
+        "name": "c4",
+        "message": "You walk towards the fireplace and seize the sword. Make sure not to lose it, you never know what you will be confronted to.",
+        "choices": [
+            "Enter through the door"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c5"
+            }
+        ]
+    },
+    "c5": {
+        "type": "list",
+        "name": "c5",
+        "message": "You enter an oak-paneled room that looks like a hunter's den. Mounted above the fireplace is a stag's head, and positioned around the outskirts of the room are three stuffed wolfs. Two padded chairs draped in animal furs face the hearth, with an oak table between them supporting the cask of wine, two carved wooden goblets, a pike rack, and a candelabrum. A chandelier hangs above a cloth-covered table surrounded by four chairs. Two cabinets stand against the walls. The left cabinet is locked. The right cabinet is not locked. From this room you can return to the main hall, go to the kitchen, or go to the hall.",
+        "choices": [
+            "Go to the main hall", 
+            "Attempt to open the left cabinet", 
+            "Open the right cabinet", 
+            "Go to the kitchen", 
+            "Go to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2"
+            }, 
+            {
+                "comment": "If this option will be developed, than it should probably be chapter1C or even chapter 2",
+                "chapter": "same",
+                "hook": "c6"
+            }, 
+            {
+                "comment": "Same here, if this option will be developed, than it should probably be chapter1D or chapter 3",
+                "chapter": "same",
+                "hook": "c7"
+            }, 
+            {
+                "chapter": "chapter2",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "chapter3",
+                "hook": "root"
+            }
+        ]
     }
 }

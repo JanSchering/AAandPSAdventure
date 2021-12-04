@@ -2,7 +2,7 @@
     "root": {
         "type": "list",
         "name": "root",
-        "message": "'Hey, you. You're finally awake. You were trying to cross the border right? Walked right into that Imperial ambush, same as us. Talos knows where they are bringing us with this caravan now. But it seems that this is our end'",
+        "message": "'Hey, you. You're finally awake. You were trying to cross the border right? Walked right into that Imperial ambush, same as us. Talos knows where they are bringing us with this caravan now. But it seems that this is our end.'",
         "choices": [
             "Ask who you are",
             "Ask why the imperials arrested you"
@@ -22,7 +22,7 @@
     "c1A": {
         "type": "input",
         "name": "char_name",
-        "message": "'First time I've seen you lad. Just choose a name, not that it matters much anymore'",
+        "message": "'First time I've seen you lad. Just choose a name, not that it matters much anymore.'",
         "responses": [
             {
                 "chapter": "same",
@@ -44,7 +44,7 @@
     "c2": {
         "type": "list",
         "name": "c2",
-        "message": "'{char_name} huh? Well whatever, you-' [Hoof sounds from the sides. A group of armed horseback riders approaches the caravan you sit in]. 'Could that be Tempestrobes? If so it must be a gift of Talos, they could be our ticket out of here'",
+        "message": "'{char_name} huh? Well whatever, you-' [Hoof sounds from the sides. A group of armed horseback riders approaches the caravan you sit in]. 'Could that be Tempestrobes? If so it must be a gift of Talos, they could be our ticket out of here.'",
         "choices": [
             "'I thought you hate them?'",
             "Say nothing"

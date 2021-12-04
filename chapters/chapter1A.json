@@ -17,5 +17,44 @@
                 "hook": "c1"
             }
         ]
+    },
+    "c1": {
+        "type": "list",
+        "name": "c1",
+        "message": "You feel the mists swallow you. The thick mists do not allow you to breath at all. It starts to get black before your eyes, if you don't seek refuge quick you fear you might suffocate.",
+        "choices": [
+            "Stay outside",
+            "Seek refuge in the house"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "final"
+            },
+            {
+                "chapter": "chapter1B",
+                "hook": "c1"
+            }
+        ]
+    },
+    "final": {
+        "type": "list",
+        "name": "final",
+        "message": "You feel your last breath leave your body as everything turns black. It appears that yet another innocent soul has fallen victim to the Death House.",
+        "choices": [
+            "Go back to last checkpoint",
+            "End game"
+        ],
+        "responses": [
+            {
+                "comment": "The final from the intro is the last checkpoint but I am not sure if we should rather make use of the 'checkpoint' key.",
+                
+                "chapter": "intro",
+                "hook": "final"
+            }, 
+            {
+                "comment": "I don't know how to end the game"
+            }
+        ]
     }
 }
