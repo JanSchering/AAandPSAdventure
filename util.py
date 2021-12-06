@@ -1,4 +1,4 @@
-from whaaaaat import style_from_dict, Token
+from whaaaaat import style_from_dict, Token   
 from enum import Enum
 from os import path, getcwd, listdir, remove
 from datetime import datetime
@@ -54,7 +54,10 @@ def handle_Checkpoint(state, chap_name, cur_sec):
 
 
 def pre_process_msg(state, msg):
-    msg = msg.replace(".", "{}\n".format("."))
+    try:
+        msg.index("\n")
+    except:
+        msg = msg.replace(".", "{}\n".format("."))
     try:
         msg = msg.replace("{char_name}", "{}".format(state["char_name"]))
     except:

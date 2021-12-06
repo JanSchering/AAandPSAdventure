@@ -25,6 +25,7 @@ while True:
     responses = cur_sec[Keys.RES.value]
     del cur_sec[Keys.RES.value]
     ans = prompt(cur_sec, style=style)
+    cur_sec[Keys.RES.value] = responses
     ans_content = ans[cur_sec[Keys.NAME.value]]
     if cur_sec[Keys.TYPE.value] == "input":
         attr_name = cur_sec[Keys.NAME.value]
