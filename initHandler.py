@@ -29,15 +29,12 @@ def get_init_state():
         }
         ans = prompt(load_prompt, style=style)
         if ans[prompt_name] == opt_new_game:
-            with open(path.join(state_path, "{}.json".format(timestamp)), "w") as f:
-                state = init_state
+            state = init_state
         else:
             an_idx = load_prompt[Keys.CHOICES.value].index(ans[prompt_name])
             with open(path.join(state_path, saveState_files[an_idx]), "r") as f:
                 state = json.load(f)
     else:
-        with open(path.join(state_path, "{}.json".format(timestamp)), "w") as f:
-            state = init_state
-            json.dump(init_state, f)
+        state = init_state
 
     return state
