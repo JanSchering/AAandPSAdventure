@@ -30,7 +30,7 @@
     "c2": {
         "type": "list",
         "name": "c2",
-        "message": "You enter the main hall. It is a width hall that runs the width of the house.",
+        "message": "You enter the main hall. It is a wide hall that runs the width of the house.",
         "choices": [
             "Look around"
         ],
