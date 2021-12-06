@@ -19,19 +19,38 @@
         "name": "intro1",
         "message": "The gravel road leads to a village, its tall houses dark as tombstones. Nestled among these solemn dwellings are a handful of closed-up shops. Even the tavern is shut tight. You hear a soft whimpering.",
         "choices": [
-            "Find the source of the whimpering"
+            "Find the source of the whimpering",
+            "Ignore the whimpering and ask around where you are"
         ],
         "responses": [
             {
                 "chapter": "same",
-                "hook": "intro2"
+                "hook": "intro2a"
+            },
+            {
+                "chapter": "same",
+                "hook": "intro2b"
             }
         ]
     },
-    "intro2": {
+    "intro2a": {
         "type": "list",
-        "name": "intro2",
+        "name": "intro2a",
         "message": "When looking around for the soft whimpering you see a pair of children standing the in the middle of an otherwise lifeless street. They don't look older than 10, maybe even younger. You wonder where their parents could be?",
+        "choices": [
+            "Approach the children"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "intro3"
+            }
+        ]
+    },
+    "intro2b":{
+        "type": "list",
+        "name": "intro2b",
+        "message":"You look around to try and find a clue for where you are. You see a pair of children standing in the middle of an otherwise lifeless street. They don't look older than 10, maybe even younger. You wonder where their parents could be?",
         "choices": [
             "Approach the children"
         ],
