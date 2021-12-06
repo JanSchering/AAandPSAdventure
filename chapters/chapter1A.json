@@ -38,23 +38,7 @@
         ]
     },
     "final": {
-        "type": "list",
-        "name": "final",
-        "message": "You feel your last breath leave your body as everything turns black. It appears that yet another innocent soul has fallen victim to the Death House.",
-        "choices": [
-            "Go back to last checkpoint",
-            "End game"
-        ],
-        "responses": [
-            {
-                "comment": "The final from the intro is the last checkpoint but I am not sure if we should rather make use of the 'checkpoint' key.",
-                
-                "chapter": "intro",
-                "hook": "final"
-            }, 
-            {
-                "comment": "I don't know how to end the game"
-            }
-        ]
+        "type": "endpoint",
+        "message": "You feel your last breath leave your body as everything turns black. It appears that yet another innocent soul has fallen victim to the Death House."
     }
 }
