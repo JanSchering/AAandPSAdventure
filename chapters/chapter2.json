@@ -1,0 +1,361 @@
+{
+    "root": {
+        "type": "list",
+        "name": "root",
+        "message": "You enter into the kitchen. It is tidy, with dishware, cookware, and utensils neatly placed on shelves. A worktable has a cutting board and rolling pin atop it. A stone, dome-shaped oven stands near the east wall, its bent iron stovepipe connecting to a hole in the ceiling. Behind the stove and to the left is a thin door leading to a well-stocked pantry. You see two other doors. Where do you go?",
+        "choices": [
+            "Open the small door in the corner of the room",
+            "Open the door labeled 'dining room'",
+            "Return to the hunter's den"
+        ],
+        "responses": [
+           {
+               "chapter": "same",
+               "hook": "c1a"
+           },
+           {
+               "chapter": "same",
+               "hook": "c1b"
+           },
+           {
+               "chapter": "chapter1B",
+               "hook": "c5"
+           }
+        ]
+    },
+    "c1a":{
+        "type": "list",
+        "name": "c1a",
+        "message": "Behind a small door in the southwest corner of the kitchen is a dumbwaiter - a half a meter wide stone shaft containing a wooden elevator box attached to a simple rope-and-pulley mechanism that must be operated manually. You see hanging on the wall next to the dumbwaiter that there is a tiny brass bell attached by wires and buttons. The buttons are labeled 'Master Bedroom' and 'Servants' Quarters'. You deduce that the dumbwaiter probably goes to those places. What do you do?",
+        "choices":[
+            "Squeeze into the elevator box",
+            "Return to the kitchen"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2a"
+            },
+            {
+                "chapter":"same",
+                "hook": "root"
+            }
+        ]
+    },
+    "c1b":{
+        "type": "list",
+        "name": "c1b",
+        "message": "You open the door and step into the dining room. The centerpiece of this wood-paneled room is a carved mahogany table surrounded by eight high-backed chairs with sculpted armrests and cushioned seats. A crystal chandelier hangs above the table, which is covered with resplendent silverware and crystalware polished to a dazzling shine. Mounted above the marble fireplace is a mahogany-framed painting of an alpine vale. The wall paneling is carved with elegant images of deer among the trees. Red silk drapes cover the windows, and a tapestry depicting hunting dogs and horse-mounted aristocrates chasing after a wolf hangs from an iron rod bolted to the south wall.",
+        "choices":[
+            "Look closer at the wood-paneled walls",
+            "Take the valuable items",
+            "Return to the kitchen"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2b"
+            },
+            {
+                "chapter":"same",
+                "hook":"c2c"
+            },
+            {
+                "chapter": "same",
+                "hook": "root"
+            }
+        ]
+    },
+    "c2a":{
+        "type": "list",
+        "name": "c2a",
+        "message": "You squeeze into the elevator box. You grab the rope to pull the box up to the next floor. One floor up you are now in the servants' quarters",
+        "choices":[
+            "Get out of the dumbwaiter",
+            "Move up to the next floor"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c3a"
+            },
+            {
+                "chapter": "same",
+                "hook": "c3b"
+            }
+        ]
+    },
+    "c2b":{
+        "type": "list",
+        "name": "c2b",
+        "message": "You inspect the walls closer. You see twisted faces carved into the tree trunks and wolves lurking amid the carved foliage. You feel uneasy. What do you do next?",
+        "choices":[
+            "Take the valuable items",
+            "Return to the kitchen"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c3c"
+            },
+            {
+                "chapter":"same",
+                "hook":"root"
+            }
+        ]
+    },
+    "c2c":{
+        "type": "list",
+        "name": "c1",
+        "message": "You steal the silverware and the crystal from the dining room. Just as you leave the room and step into the kitchen you see the silverware in your hand tarnish and the crystal cracks... almost as if some sort of curse preserved the items in the room, and now that the valuables left the room they returned to their original state. What do you do next?",
+        "choices":[
+            "Look closer at the wood-paneled walls",
+            "Return to the kitchen"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c3d"
+            },
+            {
+                "chapter":"same",
+                "hook":"root"
+            }
+        ]
+    },
+    "c3a":{
+        "type": "list",
+        "name": "c3a",
+        "message": "You step out into an undecorated bedroom that contains a pair of beds with straw-stuffed mattresses. At the foot of each bed is an empty foodlocker. Tidy servant's uniforms hang from hooks in the adjoining closet. You also see a door. What do you do?",
+        "choices":[
+            "Go through the door",
+            "Squeeze into the elevator box again and return to the ground floor",
+            "Squeeze into the elevator box again and move up to the next floor"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4a"
+            },
+            {
+                "chapter":"same",
+                "hook": "c1a"
+            },
+            {
+                "chapter":"same",
+                "hook":"c2a"
+            }
+        ]
+    },
+    "c3b":{
+        "type": "list",
+        "name": "c3b",
+        "message": "You pull yourself up to the second floor of the house. You step out in the Master Bedroom. This room has double doors with dusty panes of stained glass which lead to the hall. Designs in the glass resemble windmills. The dusty, cobweb-filled room has burgundy drapes covering the windows. Furnishings include a four-poster bed with embroidered curtains and tattered gossamer veils, a matching pair of empty wardrobes, a vanity with a wood-framed mirror, a jewelry box and a padded chair. A web-filled parlor in the southwest corner contains a table and two chairs. Resting on the dusty tablecloth is an empty porcelain bowl and a matching rug. There are two more doors in this room: one on the left side of the room, and one on the right side of the room.",
+        "choices":[
+            "Take dumbwaiter to the ground floor",
+            "Take dumbwaiter to the first floor",
+            "Inspect jewelry box",
+            "Open the left door",
+            "Open the right door",
+            "Go to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            },
+            {
+                "chapter":"same",
+                "hook": "c3a"
+            },
+            {
+                "chapter":"same",
+                "hook":"c4b"
+            },
+            {
+                "chapter":"same",
+                "hook": "c4c"
+            },
+            {
+                "chapter":"same",
+                "hook": "c4d"
+            },
+            {
+                "chapter":"chapter1B",
+                "hook": "c2"
+            }
+        ]
+    },
+    "c3c":{
+        "type": "list",
+        "name": "c3c",
+        "message": "You steal the silverware and the crystal from the dining room. Just as you leave the room and step into the kitchen you see the silverware in your hand tarnish and the crystal cracks... almost as if some sort of curse preserved the items in the room, and now that the valuables left the room they returned to their original state. You feel like you looked through everything that this room has to offer, you return to the kitchen.",
+        "choices":[
+            "Return to the kitchen"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "root"
+            }
+        ]
+    },
+    "c3d":{
+        "type": "list",
+        "name": "c3d",
+        "message": "You inspect the walls closer. You see twisted faces carved into the tree trunks and wolves lurking amid the carved foliage. You feel like you looked through everything that this room has to offer, you return to the kitchen.",
+        "choices":[
+            "Return to the kitchen"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "root"
+            }
+        ]
+    },
+    "c4a":{
+        "type": "list",
+        "name": "c4a",
+        "message": "You leave the servant's quarters and step into a hall. Besides the door you just entered from you see a door to the library, a marble staircase down, and a marble staircase up.",
+        "choices":[
+            "Take staircase down",
+            "Take staircase up",
+            "Enter the library",
+            "Return to the servants quarters"
+        ],
+        "responses": [
+            {
+                "chapter": "3",
+                "hook": "THIS CODE DOESNT EXIST YET"
+            },
+            {
+                "chapter":"3",
+                "hook":"THIS CODE DOESNT EXIST YET"
+            },
+            {
+                "chapter":"3",
+                "hook":"THIS CODE DOESNT EXIST YET"
+            },
+            {
+                "chapter":"same",
+                "hook":"c3a"
+            }
+        ]
+    },
+    "c4b":{
+        "type": "list",
+        "name": "c4b",
+        "message": "The jewelry box on the vanity is made of silver with gold filigree. It contains three gold rings and a thin platinum necklace with a topaz pendant.",
+        "choices":[
+            "Take the gold rings and the platinum necklace",
+            "Don't steal the valuable jewelry"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c5a"
+            },
+            {
+                "chapter":"same",
+                "hook":"c5b"
+            }
+        ]
+    },
+    "c4c":{
+        "type": "list",
+        "name": "c4c",
+        "message": "You walk towards the leftmost door. This door has a full-length mirror mounted on it. It opens to reveal an empty, dust-choked closet area.",
+        "choices":[
+            "THIS PART OF THE STORY HASNT BEEN WRITTEN YET"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": ""
+            }
+        ]
+    },
+    "c4d":{
+        "type": "list",
+        "name": "c4d",
+        "message": "You walk towards the door on the right. This door opens to an outside balcony. When you step on the balcony you see the ground is covered in thick mists. Luckily you have found shelter in this house.",
+        "choices":[
+            "THIS PART OF THE STORY HASNT BEEN WRITTEN YET"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": ""
+            }
+        ]
+    },
+    "c5a":{
+        "type": "list",
+        "name": "c5a",
+        "message": "You take the valuable jewelry from the box. The moment you remove them from the box he rings tarnish and the topaz loses its shine and cracks. You close the jewelry box again. How did it break immediately? Was it maybe cursed? You look into the room. Where should you go next?",
+        "choices":[
+            "Take dumbwaiter to the ground floor",
+            "Take dumbwaiter to the first floor",
+            "Open the left door",
+            "Open the right door",
+            "Go to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            },
+            {
+                "chapter":"same",
+                "hook": "c3a"
+            },
+            {
+                "chapter":"same",
+                "hook": "c4c"
+            },
+            {
+                "chapter":"same",
+                "hook": "c4d"
+            },
+            {
+                "chapter":"chapter1B",
+                "hook": "c2"
+            }
+        ]
+    },
+    "c5b":{
+        "type": "list",
+        "name": "c5b",
+        "message": "You look at the valuables in the box. they look like they might have sentimental value to the owner and just taking them would be wrong. You close the box. You look into the room. Where should you go next?",
+        "choices":[
+            "Take dumbwaiter to the ground floor",
+            "Take dumbwaiter to the first floor",
+            "Open the left door",
+            "Open the right door",
+            "Go to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            },
+            {
+                "chapter":"same",
+                "hook": "c3a"
+            },
+            {
+                "chapter":"same",
+                "hook": "c4c"
+            },
+            {
+                "chapter":"same",
+                "hook": "c4d"
+            },
+            {
+                "chapter":"chapter1B",
+                "hook": "c2"
+            }
+        ]
+    }
+}
