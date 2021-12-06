@@ -265,35 +265,35 @@
     "c4c":{
         "type": "list",
         "name": "c4c",
-        "message": "You walk towards the leftmost door. This door has a full-length mirror mounted on it. It opens to reveal an empty, dust-choked closet area.",
+        "message": "You walk towards the leftmost door. This door has a full-length mirror mounted on it. It opens to reveal an empty, dust-choked closet area. You have nothing to do here.",
         "choices":[
-            "THIS PART OF THE STORY HASNT BEEN WRITTEN YET"
+            "Return to the Master Bedroom"
         ],
         "responses": [
             {
                 "chapter": "same",
-                "hook": ""
+                "hook": "c5c"
             }
         ]
     },
     "c4d":{
         "type": "list",
         "name": "c4d",
-        "message": "You walk towards the door on the right. This door opens to an outside balcony. When you step on the balcony you see the ground is covered in thick mists. Luckily you have found shelter in this house.",
+        "message": "You walk towards the door on the right. This door opens to an outside balcony. When you step on the balcony you see the ground is covered in thick mists. Luckily you have found shelter in this house. It is cold out here, better to get back inside",
         "choices":[
-            "THIS PART OF THE STORY HASNT BEEN WRITTEN YET"
+            "Return to the Master Bedroom"
         ],
         "responses": [
             {
                 "chapter": "same",
-                "hook": ""
+                "hook": "c5c"
             }
         ]
     },
     "c5a":{
         "type": "list",
         "name": "c5a",
-        "message": "You take the valuable jewelry from the box. The moment you remove them from the box he rings tarnish and the topaz loses its shine and cracks. You close the jewelry box again. How did it break immediately? Was it maybe cursed? You look into the room. Where should you go next?",
+        "message": "You take the valuable jewelry from the box. The moment you remove them from the box the rings tarnish and the topaz loses its shine and cracks. You close the jewelry box again. How did it break immediately? Was it maybe cursed? You look into the room. Where should you go next?",
         "choices":[
             "Take dumbwaiter to the ground floor",
             "Take dumbwaiter to the first floor",
@@ -343,6 +343,45 @@
             {
                 "chapter":"same",
                 "hook": "c3a"
+            },
+            {
+                "chapter":"same",
+                "hook": "c4c"
+            },
+            {
+                "chapter":"same",
+                "hook": "c4d"
+            },
+            {
+                "chapter":"chapter1B",
+                "hook": "c2"
+            }
+        ]
+    },
+    "c5c":{
+        "type": "list",
+        "name": "c1",
+        "message": "You return to the Master Bedroom. This room has double doors with dusty panes of stained glass which lead to the hall. Designs in the glass resemble windmills. The dusty, cobweb-filled room has burgundy drapes covering the windows. Furnishings include a four-poster bed with embroidered curtains and tattered gossamer veils, a matching pair of empty wardrobes, a vanity with a wood-framed mirror, a jewelry box and a padded chair. A web-filled parlor in the southwest corner contains a table and two chairs. Resting on the dusty tablecloth is an empty porcelain bowl and a matching rug. There are two more doors in this room: one on the left side of the room, and one on the right side of the room.",
+        "choices":[
+            "Take dumbwaiter to the ground floor",
+            "Take dumbwaiter to the first floor",
+            "Inspect jewelry box",
+            "Open the left door",
+            "Open the right door",
+            "Go to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            },
+            {
+                "chapter":"same",
+                "hook": "c3a"
+            },
+            {
+                "chapter":"same",
+                "hook":"c4b"
             },
             {
                 "chapter":"same",
