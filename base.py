@@ -24,7 +24,6 @@ for sec_key in cur_chap:
 # flag so don't remake the checkpoint at starting point
 first_save_loaded = True
 
-# run the game
 while True:
     # if reached end point, print last messgae then finish
     if cur_sec[Keys.TYPE.value] == Keys.ENDP.value:
@@ -41,7 +40,9 @@ while True:
 
     # give user choices and record the choosen response
     ans = prompt(cur_sec, style=style)
-    cur_sec[Keys.RES.value] = responses # add responses back on in case need later
+    # add responses back on in case need later
+    cur_sec[Keys.RES.value] = responses
+    # filters the content of the answer out of the object
     ans_content = ans[cur_sec[Keys.NAME.value]]
 
     # save item type if needed so cannot pick up again and keeps correct format
@@ -55,8 +56,7 @@ while True:
         # to maintain format needed for prompt
         del cur_sec[Keys.ITEM.value]
 
-
-    # input is only to prompt user for name
+    # process sections that allow for user input
     if cur_sec[Keys.TYPE.value] == "input":
         # assign name extracted from the user response to state
         attr_name = cur_sec[Keys.NAME.value]
@@ -64,20 +64,19 @@ while True:
 
         # No choice to be made
         res = responses[0]
-    # done when user only has action of picking up item available
+    # process 'choice' sections
     else:
-        # the next response to print is assigned based on user choice from list
+        # retrieve correct response info based on index of user choice
         an_idx = cur_sec[Keys.CHOICES.value].index(ans_content)
         res = responses[an_idx]
-
 
     # if section is a checkpoint as long as not very first checkpoint or a reloaded checkpoint, update state
     if Keys.CHECKP.value in cur_sec.keys() and not first_save_loaded:
         state = handle_Checkpoint(state, chap_name, cur_sec)
     elif Keys.CHECKP.value in cur_sec.keys():
-        first_save_loaded = False # process the next checkpoints after the first one
+        first_save_loaded = False  # process the next checkpoints after the first one
 
-    # use chosen response to find next section    
+    # use chosen response to find next section
     chapter = res[Keys.CHAP.value]
     hook = res[Keys.HOOK.value]
 
