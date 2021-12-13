@@ -14,13 +14,13 @@ def get_init_state():
     saveState_files = listdir(path.join(getcwd(), "saveStates"))
     saveState_files.sort()
 
-    # if saved files exist offer the user to choice to load from a previous state
+    # if saved files exist offer the user to choose a previous state
     if len(saveState_files) > 0:
         # load each existing save state
         saveStates = [json.load(open(path.join(state_path, file_path)))
                       for file_path in saveState_files]
 
-        # extract chapter name, checkpoint numner, and username for each saved state
+        # extract info from saved state
         content = [str({Keys.CHAP.value: saveState[Keys.CHAP.value],
                         Keys.CHECKP.value: saveState[Keys.CHECKP.value],
                         Keys.NAME.value: saveState[Keys.CHR_NAME.value]}) for saveState in saveStates]
@@ -37,9 +37,10 @@ def get_init_state():
         # get answer from user and fills in prompt_name with the answer
         ans = prompt(load_prompt, style=style)
 
-        # start the game
+        # use clean state for new games
         if ans[prompt_name] == opt_new_game:
             state = init_state
+        # fill state based on choice
         else:
             # get index of chosen save state
             an_idx = load_prompt[Keys.CHOICES.value].index(ans[prompt_name])
