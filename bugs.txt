@@ -9,3 +9,5 @@
 4. Labelling of checkpoints is a bit unclear (when I click checkpoint 0 I don't know what to expect)
 
 5. Prompting to use arrow keys mabe just a one time thing? Looks a bit awkward
+
+6. Currently we have a limited number of save files you can make, easy to get rid of restriction though if we decide that's better. Or make higher since only 3 right now
