@@ -123,7 +123,6 @@
     },
     "c6": {
         "type": "list",
-        "checkpoint": 1,
         "name": "c3",
         "message": "You see nothing of interest on the walls, just beautiful carvings.",
         "choices": [

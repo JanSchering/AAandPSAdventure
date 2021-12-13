@@ -6,7 +6,7 @@
         "choices": [
             "Get up and look around"
         ],
-        "checkpoint": 0,
+        "checkpoint": "Woken up in forest",
         "responses": [
             {
                 "chapter": "same",
@@ -154,7 +154,7 @@
             "Don't help the children and leave",
             "Help the children"
         ],
-        "checkpoint": 1,
+        "checkpoint": "Choosing to help the children",
         "responses": [
             {
                 "chapter": "chapter1A",
