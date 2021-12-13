@@ -78,7 +78,7 @@
     "intro4": {
         "type": "list",
         "name": "intro4",
-        "message": "You introduce yourself. The oldest looking child seems less scared now that you are here. She introduces herself as Rosavalda, but you may call her Rose. Her little brother, who she introduced as Thornboldt, or Thorn, was weeping while holding a stuffed doll. Both children look almost frighteningly thin, Rose hushed the boy before looking up at you, 'There's a monster in our house!'. She then points to a tall brick row house that has seen better days. Its windows are dark. It has gated portico on the ground floor, and the rusty gate is slightly ajar. The houses on the other side are abandoned, their windows and doors boarded up.",
+        "message": "You introduce yourself. The oldest looking child seems less scared now that you are here. She introduces herself as Rosavalda, but you may call her Rose. Her little brother, who she introduced as Thornboldt, or Thorn, is weeping while holding a stuffed doll. Both children look almost frighteningly thin, Rose hushes the boy before looking up at you, 'There's a monster in our house!'. She then points to a tall brick row house that has seen better days. Its windows are dark. It has gated portico on the ground floor, and the rusty gate is slightly ajar. The houses on the other side are abandoned, their windows and doors boarded up.",
         "choices": [
             "What does the monster look like?",
             "You know where in the house the monster is?",
