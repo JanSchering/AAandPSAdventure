@@ -21,7 +21,8 @@ for sec_key in cur_chap:
     if Keys.CHECKP.value in sec.keys() and sec[Keys.CHECKP.value] == state[Keys.CHECKP.value]:
         cur_sec = sec
 
-
+# flag so don't remake the checkpoint at starting point
+first_save_loaded = True
 
 # run the game
 while True:
@@ -58,9 +59,13 @@ while True:
         res = responses[an_idx]
 
 
-    # if section is a checkpoint as long as not very first checkpoint, update state
-    if Keys.CHECKP.value in cur_sec.keys() and not(chap_name == "prelude" and cur_sec[Keys.CHECKP.value] == 0):
+    print(Keys.CHECKP.value in cur_sec.keys())
+    print(first_save_loaded)
+    # if section is a checkpoint as long as not very first checkpoint or a reloaded checkpoint, update state
+    if Keys.CHECKP.value in cur_sec.keys() and not first_save_loaded:
         state = handle_Checkpoint(state, chap_name, cur_sec)
+    elif Keys.CHECKP.value in cur_sec.keys():
+        first_save_loaded = False # process the next checkpoints after the first one
 
     # use chosen response to find next section    
     chapter = res[Keys.CHAP.value]
