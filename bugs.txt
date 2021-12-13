@@ -1,3 +1,11 @@
 # Bugs that need fixing
 
 1. some items can be picked up infinitely, e.g. the sword in the hallway
+
+2. Reading it is very hard on the eyes. Might need to clear screen, or indent more
+
+3. Was unclear needed to type for name
+
+4. Labelling of checkpoints is a bit unclear (when I click checkpoint 0 I don't know what to expect)
+
+5. Prompting to use arrow keys mabe just a one time thing? Looks a bit awkward
