@@ -66,40 +66,22 @@
             },
             {
                 "chapter": "same",
-                "hook": "c6a"
-            }
-        ]
-    },
-    "c3b": {
-        "type": "list",
-        "name": "c3a",
-        "message": "Mounted on the wall above the fireplace is a longsword with a windmill cameo worked into the hilt. The wood-paneled walls are ornately sculptured with images of vines, flowers, nymphs, and satyrs. You also see a door.",
-        "choices": [ 
-            "Enter through the door",
-            "Inspect the images on the walls"
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "c5"
-            },
-            {
-                "chapter": "same",
-                "hook": "c6b"
+                "hook": "c6"
             }
         ]
     },
     "c4": {
         "type": "list",
+        "item": "Sword",
         "name": "c4",
         "message": "You walk towards the fireplace and seize the sword. Make sure not to lose it, you never know what you will be confronted to.",
         "choices": [
-            ""
+            "Pick up the sword"
         ],
         "responses": [
             {
                 "chapter": "same",
-                "hook": "c3b"
+                "hook": "c3"
             }
         ]
     },
@@ -139,8 +121,9 @@
             }
         ]
     },
-    "c6a": {
+    "c6": {
         "type": "list",
+        "checkpoint": 1,
         "name": "c3",
         "message": "You see nothing of interest on the walls, just beautiful carvings.",
         "choices": [
@@ -149,21 +132,7 @@
         "responses": [
             {
                 "chapter": "same",
-                "hook": "c3a"
-            }
-        ]
-    },
-    "c6b": {
-        "type": "list",
-        "name": "c3",
-        "message": "You see nothing of interest on the walls, just beautiful carvings.",
-        "choices": [
-            ""
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "c3b"
+                "hook": "c3"
             }
         ]
     }

@@ -44,6 +44,17 @@ while True:
     cur_sec[Keys.RES.value] = responses # add responses back on in case need later
     ans_content = ans[cur_sec[Keys.NAME.value]]
 
+    # save item type if needed so cannot pick up again and keeps correct format
+    if Keys.ITEM.value in cur_sec.keys():
+        item = cur_sec[Keys.ITEM.value]
+        if item in state[Keys.ITEM.value]:
+            print("You have already picked that up")
+        else:
+            state[Keys.ITEM.value] = item
+
+        # to maintain format needed for prompt
+        del cur_sec[Keys.ITEM.value]
+
 
     # input is only to prompt user for name
     if cur_sec[Keys.TYPE.value] == "input":
@@ -53,14 +64,13 @@ while True:
 
         # No choice to be made
         res = responses[0]
+    # done when user only has action of picking up item available
     else:
         # the next response to print is assigned based on user choice from list
         an_idx = cur_sec[Keys.CHOICES.value].index(ans_content)
         res = responses[an_idx]
 
 
-    print(Keys.CHECKP.value in cur_sec.keys())
-    print(first_save_loaded)
     # if section is a checkpoint as long as not very first checkpoint or a reloaded checkpoint, update state
     if Keys.CHECKP.value in cur_sec.keys() and not first_save_loaded:
         state = handle_Checkpoint(state, chap_name, cur_sec)

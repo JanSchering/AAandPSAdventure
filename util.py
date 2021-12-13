@@ -28,6 +28,7 @@ class Keys(Enum):
     CHAP = "chapter"
     MSG = "message"
     NAME = "name"
+    ITEM = "item"
     TYPE = "type"
     CHR_NAME = "char_name"
     ENDP = "endpoint"
