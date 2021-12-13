@@ -4,6 +4,8 @@ from os import path, getcwd, listdir, remove
 from datetime import datetime
 import json
 
+MAX_SAVED = 3
+
 question_dir = path.join(getcwd(), "chapters")
 state_path = path.join(getcwd(), "saveStates")
 
@@ -40,26 +42,38 @@ init_state = {
 
 def handle_Checkpoint(state, chap_name, cur_sec):
     print("CHECKPOINT REACHED")
+
+    # save chapter name and checkpoint in chapter in current state
     state[Keys.CHAP.value] = chap_name
     state[Keys.CHECKP.value] = cur_sec[Keys.CHECKP.value]
+
+    # get list of current save states and sort
     saveState_files = listdir(path.join(getcwd(), "saveStates"))
     saveState_files.sort()
-    if len(saveState_files) == 3:
+
+    # make sure only 3 save files are saved at once by deleting the oldest one if over
+    if len(saveState_files) == MAX_SAVED:
         remove(path.join(state_path, saveState_files[-1]))
+
+    # save current checkpoint state in a file named by date
     timestamp = datetime.now().strftime("%d-%m-%Y-%H-%M-%S")
     with open(path.join(state_path, "{}.json".format(timestamp)), "w") as f:
-        state = init_state
         json.dump(state, f)
+
     return state
 
 
 def pre_process_msg(state, msg):
+    # every sentence is a new line
     try:
-        msg.index("\n")
-    except:
         msg = msg.replace(".", "{}\n".format("."))
+    except:
+        pass
+
+    # replace mentions of the character name with chosen user name
     try:
         msg = msg.replace("{char_name}", "{}".format(state["char_name"]))
     except:
         pass
+
     return msg
