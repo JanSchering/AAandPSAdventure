@@ -1,0 +1,54 @@
+{
+    "root": {
+        "type": "list",
+        "name": "root",
+        "message": "You step foot in the library. Red velvet drapes cover the windows of this room. An exquisite mahogany desk and matching high-back chair face the entrance and the fireplace, above which hangs a framed picture of a windmill perched atop a rocky crag. Situated in corners of the room are two overstuffed chairs. Floor-to-ceiling bookshelves line the south wall. A rolling wooden ladder allows one to more easily reach the high shelves.",
+        "choices": [
+            "Search the desk", 
+            "Look through the bookshelves"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            }
+        ]
+    },
+    "c1a": {
+        "type": "list",
+        "name": "c1a",
+        "message": "When you inspect the desk you notice it has an oil lamp, a jar of ink, a quill pen, a tinderbox, and a letter kit containing a red wax candle, four black sheets of parchment, and a wooden seal bearing the insignia of a windmill. None of these items seem like any use to you. You decide to continue your search to the bookshelves.",
+        "choices": [
+            "Look through the bookshelves"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            }
+        ]
+    }, 
+    "c1b": {
+        "type": "list",
+        "name": "c1b",
+        "message": "The bookshelves hold hundreds of tomes covering a range of topics including history, warfare, and alchemy. There are also several shelves containing first-edition collected works of poetry and fiction. When you take a book off of the shelve it rots and falls apart in your hand. You do however notice something interesting on one of the shelves: a fake book. What do you do?",
+        "choices": [
+            "Take the fake book", 
+            "Continue looking through the books"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c2b"
+            }
+        ]
+    }
+}
