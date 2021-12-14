@@ -1,0 +1,151 @@
+{
+    "root": {
+        "type": "list",
+        "name": "root",
+        "message": "You enter the hall. Unlit oil lamps are mounted on the walls of this elegant hall. Hanging above the mantlepiece is a wood-framed portrait of the family of Rose and Thorn. You see their parents and the two children. The father cradles a swaddled baby, which the mother regards with a hint of a scorn. Standing suits of armor flank wooden walls in the east and west walls. Each suit of armor clutches a spear and has a visored helm shaped like a wolf's head. The walls are carved with dancing children. At one end of the hallway is a red marble staircase, and at the other end is a way to go to the hunter's den. You also notice a trapdoor in the floor.",
+        "choices": [
+            "Look closer at the walls", 
+            "Use the stairs to go a floor up", 
+            "Return to the hunter's den", 
+            "Open the trapdoor in the floor"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            }, 
+            {
+                "chapter": "chapter1B",
+                "hook": "c5"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }
+        ]
+    },
+    "c1a": {
+        "type": "list",
+        "name": "c1a",
+        "message": "You inspect the walls and notice that the children are not dancing but rather fight off swarms of bats.",
+        "choices": [
+            "Look closer at the walls", 
+            "Use the stairs to go a floor up", 
+            "Return to the hunter's den", 
+            "Open the trapdoor in the floor"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            }, 
+            {
+                "chapter": "chapter1B",
+                "hook": "c5"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }
+        ]
+    },
+    "c1b": {
+        "type": "list",
+        "name": "c1b",
+        "message": "You enter a hall. The hall has two doors, one to the servants' quarters and one to the library. You can also take the stairs down or the stairs up.",
+        "choices": [
+            "Look around", 
+            "Open the door to the servants' quarters", 
+            "Open the door to the library", 
+            "Use stairs to go a floor up", 
+            "Use stairs to go a floor down"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c2b"
+            }, 
+            {
+                "chapter": "chapter4",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "chapter5",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "root"
+            }
+        ]
+    },
+    "c2a": {
+        "type": "list",
+        "name": "c2a",
+        "message": "When you inspect the elegant hall you notice that gossamer drapes cover the windows. The hall has a brass-plated chandelier hanging from the ceiling. Upholstered chairs line the walls and stained-glass wall hangings depict beautiful men, women, and children singing and playing instruments.",
+        "choices": [
+            "Inspect the stained-glass wallhangings"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c3a"
+            }
+        ]
+    },
+    "c3a": {
+        "type": "list",
+        "name": "c3a",
+        "message": "When inspecting the stained-glass you see some of the children are instead well-dressed skeletons. Where will you go now?",
+        "choices": [
+            "Open the door to the servants' quarters", 
+            "Open the door to the library", 
+            "Use the stairs to go a floor up", 
+            "Use the stairs to go a floor down"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2b"
+            }, 
+            {
+                "chapter": "chapter4",
+                "hook": "root"
+            },
+            {
+                "chapter":"THIS CODE DOESNT EXIST YET",
+                "hook":"THIS CODE DOESNT EXIST YET"
+            },
+            {
+                "chapter":"same",
+                "hook":"root"
+            }
+        ]
+    },
+    "c2b": {
+        "type": "list",
+        "name": "c2b",
+        "message": "You enter the servants' quarters. When looking around you notice it is an undecorated bedroom that contains a pair of beds with straw-stuffed mattresses. At the foot of each bed is an empty footlocker. Tidy servant's uniforms hang from hooks in the adjoining closet. This room definitely has nothing to help find the monster.",
+        "choices": [
+            "Return to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "root"
+            }
+        ]
+    }
+}
