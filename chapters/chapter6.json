@@ -1,0 +1,156 @@
+{
+    "root": {
+        "type": "list",
+        "name": "root",
+        "message": "You step out in the Master Bedroom. This room has double doors with dust panes of stained glass which lead to the hall. Designs in the glass resemble windmills. The dusty, cobweb-filled room has burgundy drapes covering the windows. Furnishings include a four-poste bed with embroidered curtains and tattered gossamer veils, a matching pair of empty wardrobes, a vanity with a wood-framed mirror, a jewelry box and a padded chair. A web-filled parlor in the southwest corner contains a table and two chairs. Resting on the dusty tablecloth is an empty porcelain bowl and a matching rug. There are two more doors in this room: one on the left side of the room, and one on the right side of the room.",
+        "choices": [
+            "Open the right door", 
+            "Return to the hall", 
+            "Inspect jewelry box", 
+            "Open the left door"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "chapter5",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }
+        ]
+    }, 
+    "c1a": {
+        "type": "list",
+        "name": "c1a",
+        "message": "You walk towards the door on the right. This door opens to an outside balcony. When you step on the balcony you see the ground is covered in thick mists. Luckily you have found shelter in this house. I better go back inside.",
+        "choices": [
+            "Open the right door", 
+            "Return to the hall", 
+            "Inspect jewelry box", 
+            "Open the left door"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "chapter5",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }
+        ]
+    }, 
+    "c1b": {
+        "type": "list",
+        "name": "c1b",
+        "message": "The jewelry box on the vanity is made of silver with gold filigree. It contains three gold rings and a thin platinum necklace with a topaz pendant.",
+        "choices": [
+            "Take the gold rings and platinum necklace", 
+            "Don't steal the valuable jewelry"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c2b"
+            }
+        ]
+    },
+    "c2a": {
+        "type": "list",
+        "name": "c2a",
+        "message": "You take the valuable jewelry from the box. The moment you remove them from the box the rings tarnish and the topaz loses its shine and cracks. You close the jewelry box again. How did it break immediately? Was it maybe cursed? You look into the room. Where should you go next?",
+        "choices": [
+            "Open the right door", 
+            "Return to the hall", 
+            "Open the left door"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "chapter5",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }
+        ]
+    },
+    "c2b": {
+        "type": "list",
+        "name": "c2b",
+        "message": "You look at the valuables in the box. they look like they might have sentimental value to the owner and just taking them would be wrong. You close the box. You look into the room. Where should you go next?",
+        "choices": [
+            "Open the right door", 
+            "Return to the hall", 
+            "Open the left door"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "chapter5",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }
+        ]
+    },
+    "c1c": {
+        "type": "list",
+        "name": "c1c",
+        "message": "You walk towards the leftmost door. This door has a full-length mirror mounted on it. It opens to reveal an empty, dust-choked closet area. You have nothing to do here. You leave the closet.",
+        "choices": [
+            "Open the right door", 
+            "Return to the hall", 
+            "Inspect jewelry box", 
+            "Open the left door"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "chapter5",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }
+        ]
+    }
+}
