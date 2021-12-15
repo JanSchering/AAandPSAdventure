@@ -1,0 +1,85 @@
+{
+    "root": {
+        "type": "list",
+        "name": "root",
+        "message": "You enter a dusty hall. The oak-paneled walls are carved with woodland scenes of trees, falling leaves, and tiny critters. The balcony has doors to the master bedroom, the bathroom, the storage room and the nursemaid's suite. From here you can also go a floor down.",
+        "choices": [
+            "Investigate the walls", 
+            "Go to the master bedroom", 
+            "Go to the bathroom", 
+            "Go to the storage room", 
+            "Go to the nursemaid's suite",
+            "Use the stairs to go a floor down"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }, 
+            {
+                "chapter": "chapter6",
+                "hook": "root"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c1d"
+            }, 
+            {
+                "chapter": "chapter3",
+                "hook": "c1b"
+            }
+        ]
+    }, 
+    "c1a": {
+        "type": "list",
+        "name": "c1a",
+        "message": "You notice notice tiny corpses hanging from the trees and worms bursting up from the ground carved in the walls. You also notice a secret door.",
+        "choices": [
+            "Open the door"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2a"
+            }
+        ]
+    }, 
+    "c2a": {
+        "type": "list",
+        "name": "c2a",
+        "message": "You push at the location where you just saw an outline of a secret door. It pushes open easily to reveal a cobweb-filled woorden staircase leading up to the attic",
+        "choices": [
+            "Go to the attic", 
+            "Stay in the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c3a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "root"
+            }
+        ]
+    }, 
+    "c3a": {
+        "type": "list",
+        "name": "c2a",
+        "message": "You push at the location where you just saw an outline of a secret door. It pushes open easily to reveal a cobweb-filled woorden staircase leading up to the attic",
+        "choices": [
+            
+            ],
+        "responses": [
+            
+        ]
+    }
+}
