@@ -50,5 +50,313 @@
                 "hook": "c2b"
             }
         ]
+    },
+    "c2a": {
+        "type": "list",
+        "name": "c2a",
+        "message": "When pulling the fake book a secret door opens.",
+        "choices": [
+            "Enter the secret room"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c3"
+            }
+        ]
+    }, 
+    "c2b": {
+        "type": "list",
+        "name": "c2b",
+        "message": "You read many more titles, none of which seem to be of any help in defeating the monster. You did however find a key. Should you now take the fake book, or return to the hall?",
+        "choices": [
+            "Take the fake book", 
+            "Return to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2a"
+            }, 
+            {
+                "chapter": "chapter3",
+                "hook": "root"
+            }
+        ]
+    }, 
+    "c3": {
+        "type": "list",
+        "name": "c3",
+        "message": "You enter the secret room. This room contains bookshelves packed with tomes describing different rituals of a cult called the Priests of Osybus. Do they have something to do with this strange house? In the center of the room lies a heavy wooden chest with its lid half-closed. Sticking out of the chest is a skeleton in leather armor.",
+        "choices": [
+            "Take the leather armor",
+            "Look inside the chest",
+            "Leave the secret room",
+            "Read about The Priests of Osybus"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c4b"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c4d"
+            }
+        ]
+    }, 
+    "c4a": {
+        "type": "list",
+        "name": "c4a",
+        "message": "You enter the secret room. This room contains bookshelves packed with tomes describing different rituals of a cult called the Priests of Osybus. Do they have something to do with this strange house? In the center of the room lies a heavy wooden chest with its lid half-closed. Sticking out of the chest is a skeleton in leather armor.",
+        "choices": [
+            "Look inside the chest",
+            "Leave the secret room",
+            "Read about The Priests of Osybus"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c5a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c5b"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c5c"
+            }
+        ]
+    }, 
+    "c5a": {
+        "type": "list",
+        "name": "c5a",
+        "message": "You peek inside the chest and find a magical sword. This longsword kills enemies quicker and hurts undead creatures more than regular swords.",
+        "choices": [
+            "Take the sword", 
+            "Leave the sword"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c6a"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c6b"
+            }
+        ]
+    }, 
+    "c6a": {
+        "type": "list",
+        "name": "c6a",
+        "message": "Now that you have the magic sword you feel better equipped to deal with a monster. What do you do next?",
+        "choices": [
+            "Leave the secret room", 
+            "Read about The Priests of Osybus"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c7a"
+            }
+        ]
+    }, 
+    "c6b": {
+        "type": "list",
+        "name": "c6b",
+        "message": "You feel like this sword might help you a lot, but you decide not from steal from the people living here... even though you really don't feel like many people still come here... How nice of you. What do you do next?",
+        "choices": [
+            "Leave the secret room"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }
+        ]
+    }, 
+    "c7a": {
+        "type": "list",
+        "name": "c7a",
+        "message": "The Priests of Osybus belong to a centuries old order of magic users that wield necromancy powered by the souls of their victims. But this is so long ago that at this point it is nothing but a fairytale... Right? You feel like you looked through everything the room had to offer. You look at the skeleton again.",
+        "choices": [
+            "Leave the secret room"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }
+        ]
+    }, 
+    "c4b": {
+        "type": "list",
+        "name": "c4b",
+        "message": "You peek inside the chest and find a magical sword. This longsword kills enemies quicker and hurts undead creatures more than regular swords.",
+        "choices": [
+            "Take the sword", 
+            "Leave the sword"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c5b"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c6b"
+            }
+        ]
+    }, 
+    "c5b": {
+        "type": "list",
+        "name": "c5b",
+        "message": "Now that you have the magic sword you feel better equipped to deal with a monster. What do you do next?",
+        "choices": [
+            "Leave the secret room", 
+            "Take the leather armor"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c6c"
+            }
+        ]
+    }, 
+    "c6c": {
+        "type": "list",
+        "name": "c6c",
+        "message": "You take the leather armor of the skeleton, he won't be needing it anymore. You now have leather armor. What do you do next?",
+        "choices": [
+            "Leave the secret room", 
+            "Read about The Priests of Osybus"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c7a"
+            }
+        ]
+    }, 
+    "c4c": {
+        "type": "list",
+        "name": "c4c",
+        "message": "Seeing the skeleton makes you feel sick. Were Rose and Thorn right? Is there a monster here? And will it kill you too, like it killed this poor adventurer? You decide to leave the secret room before you find out.",
+        "choices": [
+            "Go back to te library"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "root"
+            }
+        ]
+    },  
+    "c4d": {
+        "type": "list",
+        "name": "c4d",
+        "message": "The Priests of Osybus belong to a centuries old order of magic users that wield necromancy powered by the souls of their victims. But this is so long ago that at this point it is nothing but a fairytale... Right? What will you do next?",
+        "choices": [
+            "Leave the secret room", 
+            "Look inside the chest"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c5c"
+            }
+        ]
+    },  
+    "c5c": {
+        "type": "list",
+        "name": "c5c",
+        "message": "You peek inside the chest and find a magical sword. This longsword kills enemies quicker and hurts undead creatures more than regular swords.",
+        "choices": [
+            "Take the sword", 
+            "Leave the sword"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c6d"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c6e"
+            }
+        ]
+    },
+    "c6d": {
+        "type": "list",
+        "name": "c5b",
+        "message": "Now that you have the magic sword you feel better equipped to deal with a monster. What do you do next?",
+        "choices": [
+            "Leave the secret room", 
+            "Take the leather armor"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }, 
+            {
+                "chapter": "same",
+                "hook": "c7b"
+            }
+        ]
+    }, 
+    "c7b": {
+        "type": "list",
+        "name": "c7b",
+        "message": "You take the leather armor of the skeleton, he won't be needing it anymore. You now have leather armor. You feel like you took everything that this room has to offer. You look at the skeleton again.",
+        "choices": [
+            "Leave the secret room"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }
+        ]
+    }, 
+    "c6e": {
+        "type": "list",
+        "name": "c6e",
+        "message": "You feel like this sword might help you a lot, but you decide not from steal from the people living here... even though you really don't feel like many people still come here... How nice of you. What do you do next?",
+        "choices": [
+            "Leave the secret room"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4c"
+            }
+        ]
     }
 }
