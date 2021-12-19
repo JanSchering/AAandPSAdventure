@@ -20,11 +20,11 @@
             }, 
             {
                 "chapter": "chapter1B",
-                "hook": "c5"
+                "hook": "c4b"
             }, 
             {
-                "chapter": "same",
-                "hook": "c1c"
+                "chapter": "chapter8",
+                "hook": "root"
             }
         ]
     },

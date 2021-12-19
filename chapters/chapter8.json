@@ -1,0 +1,13 @@
+{
+    "root": {
+        "type": "list",
+        "name": "root",
+        "message": "You push at the location where you just saw an outline of a secret door. It pushes open easily to reveal a cobweb-filled woorden staircase leading up to the attic",
+        "choices": [
+            "I stopped here because it's the same if-statement issue. I did not implement the subparts of this option either."
+            ],
+        "responses": [
+            
+        ]
+    }
+}
