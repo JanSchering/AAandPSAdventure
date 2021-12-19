@@ -62,26 +62,15 @@
         ],
         "responses": [
             {
-                "chapter": "same",
-                "hook": "c3a"
+                "chapter": "chapter7",
+                "hook": "root"
             }, 
             {
                 "chapter": "same",
                 "hook": "root"
             }
         ]
-    }, 
-    "c3a": {
-        "type": "list",
-        "name": "c2a",
-        "message": "You push at the location where you just saw an outline of a secret door. It pushes open easily to reveal a cobweb-filled woorden staircase leading up to the attic",
-        "choices": [
-            "I stopped here because of the if-statement issue. I did not implement the subparts of this option either."
-            ],
-        "responses": [
-            
-        ]
-    }, 
+    },
     "c1b": {
         "type": "list",
         "name": "c1b",
@@ -144,13 +133,13 @@
             }, 
             {
                 "chapter": "same",
-                "hook": "c3b"
+                "hook": "c3a"
             }
         ]
     }, 
-    "c3b": {
+    "c3a": {
         "type": "list",
-        "name": "c3b",
+        "name": "c3a",
         "message": "Kidnapping a child seems like a bad thing to do, even if it might save the poor boy. You decide to leave him laying there in his crib.",
         "choices": [
             "Return to the hall"
