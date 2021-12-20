@@ -28,10 +28,15 @@ class Keys(Enum):
     CHAP = "chapter"
     MSG = "message"
     NAME = "name"
-    ITEM = "item"
+    ITEM = "items"
     TYPE = "type"
     CHR_NAME = "char_name"
     ENDP = "endpoint"
+    COND = "conditional"
+    ATTR = "attr"
+    COMPARATOR = "comp_type"
+    VAL = "value"
+
 
 
 init_state = {

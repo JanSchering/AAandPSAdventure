@@ -25,10 +25,29 @@ for sec_key in cur_chap:
 first_save_loaded = True
 
 while True:
-    # if reached end point, print last messgae then finish
+    # if reached an end point, print last message then finish
     if cur_sec[Keys.TYPE.value] == Keys.ENDP.value:
         print(cur_sec[Keys.MSG.value])
         break
+    # if reached a conditional point, check condition and retrieve the valid prompt
+    elif cur_sec[Keys.TYPE.value] == Keys.COND.value:
+        condition_info = cur_sec[Keys.COND.value]
+        # Get key of the attribute to check
+        attr = condition_info[Keys.ATTR.value]
+        comp_type = condition_info[Keys.COMPARATOR.value]
+        # Implies that we have to check for list contingency
+        if comp_type == "contains":
+            # stringified boolean of the conditional
+            comp_res = str(condition_info[Keys.VAL.value] in state[attr])
+            # replace the current section by the nested section
+            cur_sec = cur_sec[comp_res]
+        # Else assume that it is a direct value comparison
+        else:
+            # stringified boolean of the conditional
+            comp_res = str(condition_info[Keys.VAL.value] == state[attr])
+            # replace the current section by the nested section
+            cur_sec = cur_sec[comp_res]
+        
 
     # process next message to be well formatted
     cur_sec[Keys.MSG.value] = pre_process_msg(state, cur_sec[Keys.MSG.value])
@@ -51,7 +70,7 @@ while True:
         if item in state[Keys.ITEM.value]:
             print("You have already picked that up")
         else:
-            state[Keys.ITEM.value] = item
+            state[Keys.ITEM.value].append(item)
 
         # to maintain format needed for prompt
         del cur_sec[Keys.ITEM.value]
