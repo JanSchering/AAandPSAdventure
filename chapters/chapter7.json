@@ -10,17 +10,17 @@
         "responses": [
             {
                 "chapter": "same",
-                "hook": "c1"
+                "hook": "c1a"
             },
             {
                 "chapter": "same",
-                "hook": "c2"
+                "hook": "c1b"
             }
         ]
     },
-    "c1": {
+    "c1a": {
         "type": "conditional",
-        "name": "c1",
+        "name": "c1a",
         "conditional": {
             "attr": "items",
             "value": "key",
@@ -28,7 +28,7 @@
         },
         "True": {
             "type": "list",
-            "name": "c1",
+            "name": "c1aT",
             "message": "You walk up the stairs to the attic. At the top of the stairs is a door. it is locked. You remembered you found a key in the library, could it be for this door? You take the keyout of your pocket and try to open the door. It works! The door opens to reveal another hall. You step into the hall. This hall has doors to the spare bedroom, a storage room, and a children's room.",
             "choices": [
                 "Enter spare bedroom",
@@ -37,19 +37,98 @@
                 "Return downstairs to the hall again"
             ],
             "responses": [
-                "TODO"
+                {
+                    "chapter": "same",
+                    "hook": "c3a"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "c3b"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "c3c"
+                },
+                {
+                    "chapter": "chapter5",
+                    "hook": "root"
+                }
             ]
         },
         "False": {
             "type": "list",
-            "name": "c1",
+            "name": "c1aF",
             "message": "You walk up the stairs to the attic. At the top of the stairs is a door. it is locked. You try to open the door but the lock won't break. Maybe you can find a key somewhere?",
             "choices": [
                 "Return to the Hall"
             ],
             "responses": [
-                "TODO"
+                {
+                    "chapter": "chapter5",
+                    "hook": "root"
+                }
             ]
         }
+    }, 
+    "c3a": {
+        "type": "list",
+        "name": "c3a",
+        "message": "You walk into the spare bedroom. This dust-choked room contains a slender bed, a nightstand, a small iron stove, a writing desk with a stool, an empty wardrobe, and a rocking chair. A smiling doll in a lacy yellow dress sits in the northern window box, cobwebs draping it like a wedding veil. After looking around, you decide this room has nothing to help you find and defeat the monster.",
+        "choices": [
+            "Return to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }
+        ]
+    }, 
+    "c3b": {
+        "type": "list",
+        "name": "c3b",
+        "message": "You walk into the storage room. This dusty chamber is packed with old furniture all draped in dusty white sheets. Near an iron stove, underneath one of the sheets, is an wooden trunk containing the skeletal remains of the family's nursemaid, wrapped in a tattered bedsheet stained with blood. A knife still impales the skeleton.",
+        "choices": [
+            "Inspect the corpse", 
+            "Return to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4a"
+            },
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }
+        ]
+    }, 
+    "c4a": {
+        "type": "list",
+        "name": "c4a",
+        "message": "The woman was stabbed to death by multiple knife wounds. Why would someone do this? Out of jealousy perhaps? The smell of death still lingers in this room, you decide to return to the hall before you become unwell.",
+        "choices": [
+            "Return to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }
+        ]
+    }, 
+    "c3c": {
+        "type": "list",
+        "name": "c3c",
+        "message": "You try to enter the children's room but you notice the door is locked. Luckily the lock did not pass the test of time so after pounding the lock it fell apart and you where able to open the door. This must be where Rose and Thorn sleep, you think to yourself. The room contains a bricked-up window flanked by two dusty, wood-framed beds sized for children. Closer to the door is a toy chest with windmills painted on its sides and a dollhouse that’s a perfect replica of the exact house in which you stand. The furnishings are draped in cobwebs. Lying in the middle of the floor are two small skeletons wearing tattered but familiar clothing. The smaller of the two cradles a stuffed doll that you also recognize. How strange, didn't Thorn carry that exact doll when you saw him outside? You stomach turns just thinking about what could have happened in this room.",
+        "choices": [
+            "Return to the hall"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c1a"
+            }
+        ]
     }
 }

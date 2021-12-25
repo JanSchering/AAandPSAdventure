@@ -1,13 +1,381 @@
 {
     "root": {
-        "type": "list",
+        "type": "conditional",
         "name": "root",
-        "message": "You push at the location where you just saw an outline of a secret door. It pushes open easily to reveal a cobweb-filled woorden staircase leading up to the attic",
-        "choices": [
-            "I stopped here because it's the same if-statement issue. I did not implement the subparts of this option either."
+        "conditional": {
+            "attr": "items",
+            "value": "sword",
+            "matching": "contains"
+        },
+        "True": {
+            "type": "list",
+            "name": "c2a",
+            "message": "You open the trapdoor and see a ladder that goes down into the basement. You climb the ladder down. From the moment you set foot in the basement you hear eerie, incessant chants echoing throughout the room, you feel like you are not as alone as you had hoped. You try to gauge where the sound is coming from but you fail. You also cannot discern what is being said. When you look around you see a number of crypts. What is this place? You can feel your heart racing as you step foot in the basement.",
+            "choices": [
+                "Inspect the crypts",
+                "Go further exploring the space"
             ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c1b"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "c1c"
+                }
+            ]
+        },
+        "False": {
+            "type": "list",
+            "name": "c2b",
+            "message": "You remember that Rose and Thorn mentioned something about a monster. The basement definitely sounds like the most scary part of the house, so maybe the monster is here? It might be best if I investigate this place further to try and find something strong enough to defend myself with, just in case...",
+            "choices": [
+                "Return to the hall",
+                "Enter the basement anyway"
+            ],
+            "responses": [
+                {
+                    "chapter": "chapter3",
+                    "hook": "root"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "c1a"
+                }
+            ]
+        }
+    }, 
+    "c1a": {
+        "type": "list",
+        "name": "c1a",
+        "message": "You open the trapdoor and see a ladder that goes down into the basement. You climb the ladder down. From the moment you set foot in the basement you hear eerie, incessant chants echoing throughout the room, you feel like you are not as alone as you had hoped. You try to gauge where the sound is coming from but you fail. You also cannot discern what is being said. When you look around you see a number of crypts. What is this place? You can feel your heart racing as you step foot in the basement.",
+        "choices": [
+            "Inspect the crypts",
+            "Go further exploring the space"
+        ],
         "responses": [
-            
+            {
+                "chapter": "same",
+                "hook": "c1b"
+            },
+            {
+                "chapter": "same",
+                "hook": "c1c"
+            }
         ]
+    },
+    "c1b": {
+        "type": "conditional",
+        "name": "c1b",
+        "conditional": {
+            "attr": "people",
+            "value": "rose",
+            "matching": "contains"
+        },
+        "True": {
+            "type": "list",
+            "name": "c1bT",
+            "message": "When you inspect the crypts you notice that there is both a crypt for Rose and for Thorn. Neither crypts contain their remains.You think back to the small corpses you saw in the children's room. You remember the door was locked when you first got there, were they maybe locked up and forgotten about? When thinking back about seeing the children, or rather... the ghosts of the children, outside you remember how thin they looked when you first saw them. Did they perhaps die of starvation? You feel a pit in your stomach thinking about what happened in this house. Those poor children deserved better than to have such monsters as parents.",
+            "choices": [
+                "Go further exploring the space"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c1c"
+                }
+            ]
+        },
+        "False": {
+            "type": "list",
+            "name": "c1bF",
+            "message": "When you inspect the crypts you notice that there is both a crypt for two people that you don't recognize. Neither crypts contain their remains.",
+            "choices": [
+                "Go further exploring the space"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c1c"
+                }
+            ]
+        }
+    }, 
+    "c1c": {
+        "type": "list",
+        "name": "c1c",
+        "message": "You continue walking through the basement. You enter the cult initiates' quarters. Here you see a wooden table and four chairs at the end of the room. To the west are four alcoves containing moldy straw pallets. The middle of the room has a large well. A wooden bucket hangs from a rope-and-pulley mechanism bolted to the crossbeams above the well. As you continue walking through the dungeon the chanting gets discerningly louder.",
+        "choices": [
+            "Listen to the chants",
+            "Continue walking towards the chants"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c2b"
+            },
+            {
+                "chapter": "same",
+                "hook": "c2a"
+            }
+        ]
+    }, 
+    "c2a": {
+        "type": "list",
+        "name": "c2a",
+        "message": "You continue following the chants paying close attention to not fall in any traps. You enter the dining hall, which contains a plain wooden table flanked by long benches. You see human bones lying strewn on the dirt floor. As you continue walking north the chants get louder and louder. As you follow the chants you arrive at a staircase down. It is obvious to you that the chants originate from somewhere below. What do you do?",
+        "choices": [
+            "Descent the stairs",
+            "Find your way back to the trapdoor upstairs"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c3a"
+            },
+            {
+                "chapter": "same",
+                "hook": "c3b"
+            }
+        ]
+    }, 
+    "c3b": {
+        "type": "list",
+        "name": "c3b",
+        "message": "All of this is becoming too much for you. First the crypts, then the chanting and now human bones all over the floor?! Whatever monster lives here will not be disturbed by you. You run as fast as you can back to the trapdoor. ",
+        "choices": [
+            "Climb the ladder up"
+        ],
+        "responses": [
+            {
+                "chapter": "chapter3",
+                "hook": "root"
+            }
+        ]
+    }, 
+    "c3a": {
+        "type": "list",
+        "name": "c3a",
+        "message": "You descent the stairs and follow the hall to the reliquary. The chants are so loud in this room that you can finally discern them. You can hear a dozen or so voices say over and over again 'Blessed are the followers, for they shall be eaten first'. You think back to the bones you just saw on the table. Were those the bones of these so-called followers that were eaten?",
+        "choices": [
+            "Descent the stairs",
+            "Find your way back to the trapdoor upstairs"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4"
+            },
+            {
+                "chapter": "same",
+                "hook": "c3b"
+            }
+        ]
+    },
+    "c4": {
+        "type": "conditional",
+        "name": "c4",
+        "conditional": {
+            "attr": "rooms",
+            "value": "secretroom",
+            "matching": "contains"
+        },
+        "True": {
+            "type": "list",
+            "name": "c4a",
+            "message": "You also think back to the rituals from the cult called the Priests of Osybus. Were these cultists active in this basement? Do they have something to do with the monster perhaps? From the reliquary you see a door to the ritual chamber. Do you dare to enter?",
+            "choices": [
+                "Enter the ritual chamber", 
+                "Find your way back to the trapdoor upstairs"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c5"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "c3b"
+                }
+            ]
+        },
+        "False": {
+            "type": "list",
+            "name": "c4b",
+            "message": "From the reliquary you see a door to the ritual chamber. Do you dare to enter?",
+            "choices": [
+                "Enter the ritual chamber", 
+                "Find your way back to the trapdoor upstairs"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c5"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "c3b"
+                }
+            ]
+        }
+    }, 
+    "c5": {
+        "type": "list",
+        "name": "c5",
+        "message": "As soon as you set foot in the large room the chanting stops. Featureless stone pillars support the ceiling, and a breach in the west wall leads to a dark cave heaped with refuse. Murky water covers most of the floor. Stairs lead up to dry stone ledges that hug the walls. In the middle of the room, more stairs rise to form an octagonal dais that also rises above the water. Rusty chains with shackles dangle from the ceiling directly above a stone altar mounted on the dais. The altar is carved with hideous depictions of grasping ghouls and is stained with dry blood.",
+        "choices": [
+            "Investigate the room",
+            "Find your way back to the trapdoor upstairs"
+        ],
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c6"
+            },
+            {
+                "chapter": "same",
+                "hook": "c3b"
+            }
+        ]
+    },
+    "c6": {
+        "type": "conditional",
+        "name": "c6",
+        "conditional": {
+            "attr": "people",
+            "value": "walter",
+            "matching": "contains"
+        },
+        "True": {
+            "type": "list",
+            "name": "c6a",
+            "message": "You investigate the room. As you walk around you feel drawn to the dais. The moment you step on the top of the dais the chanting rises once more. Thirteen dark apparitions appear on the ledges overlooking the room. Each one resembles a black-robed figure holding a torch, but the torches fire is black and seems to draw light into it. Where you expect to see faces are voids. 'One must die!' they chant, over and over. 'One must die! One must die!'.",
+            "choices": [
+                "Kill yourself",
+                "Kill baby Walter", 
+                "Try to kill them"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c7a"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "c7b"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c7c"
+                }
+            ]
+        },
+        "False": {
+            "type": "list",
+            "name": "c6b",
+            "message": "You investigate the room. As you walk around you feel drawn to the dais. The moment you step on the top of the dais the chanting rises once more. Thirteen dark apparitions appear on the ledges overlooking the room. Each one resembles a black-robed figure holding a torch, but the torches fire is black and seems to draw light into it. Where you expect to see faces are voids. 'One must die!' they chant, over and over. 'One must die! One must die!'.",
+            "choices": [
+                "Kill yourself",
+                "Try to kill them"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c7a"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c7c"
+                }
+            ]
+        }
+    }, 
+    "c7a": {
+        "type": "list",
+        "name": "c7a",
+        "message": "You decide to appease the cult. You don't see how you will ever make it out of here alive, and quite frankly, after all you have seen in this house your life will never be the same as it was just this morning anyway. What is the point of living if you have to live with these terrors haunting you? You see no other option but to end it right here right now, before they get a chance to end it for you, which will presumably be much more painful. You take your sword and stab yourself in the heart, giving the cult exactly what they want. The cult is appeased. The chants change to 'One has died! One has di-'. That is all you can hear before everything goes dark. It appears that yet another soul has fallen victim to the Death House.",
+        "choices": [
+            "END THE GAME"
+        ],
+        "responses": [
+            "END THE GAME"
+        ]
+    }, 
+    "c7b": {
+        "type": "list",
+        "name": "c7b",
+        "message": "You decide to appease the cult. One must die and it certainly won't be you! You grab your sword and cut little baby Walter's throat, giving the cult what they want. The cult is appeased. The chants change to 'One has died! One has followed!'. 'Followed?!' you think to yourself. When looking down you notice you are now also wearing a black robe, except yours is covered in the blood of Walter. But.. the blood continues to soak your robe. That is when you realize that it is your blood soaking the robe. The cultists slowly move towards you. There is nowhere you can run to, nowhere you can hide. The chant changes again to 'Blessed are the followers, for they shall be eaten first. Blessed are the followers for they shall be eaten first. Blessed are the followers, for they shall be eaten f-''. That is all you can hear before everything goes dark. It appears that yet another soul has fallen victim to the Death House.",
+        "choices": [
+            "END THE GAME"
+        ],
+        "responses": [
+            "END THE GAME"
+        ]
+    },
+    "c7c": {
+        "type": "conditional",
+        "name": "c7c",
+        "conditional": {
+            "attr": "items",
+            "value": "sword",
+            "matching": "contains"
+        },
+        "True": {
+            "type": "list",
+            "name": "c7cT",
+            "message": "One must die? Well it certainly won't be you! You remember your sword was extra powerful on undead creatures, which is exactly what these cultists appear to be. You take your sword. The first cultist does not seem fearful of the sword. As it approaches you it screeches 'I'm already dead you fool! You can't hurt me anymo-'. Before it can finish it's sentence you stab the void. It vanishes with a loud howl, leaving only a robe behind. The other cultists chant 'One has died! One has died!' asthey slowly disappear one by one. 'One has died! One has died! One has died!'. As the cultists vanished, so did their chants. You are left alone in the chamber as you defeated the monster: the priests of Osybus. As you relish in your victory the house starts to change. Everything seems to fall apart. Planks rot under your feet, walls collapse right in front of you. You run back through the basement and climb up the ladder, you have to escape before it all collapses! As you run through the house you see the wallpapers start to decay and valuables start to rot. Whatever curse preserved this house is now broken and everything is falling apart quickly. You eventually find your way back to the front doors, which are now rotten and the stained glass is shattered. Just as you leave the house the entire building starts to collapse, destroying everything left inside it. You look down and see little Rose and Thorn standing in front of you. 'You did it!' squealed Rose. 'You slayed the monster! thank you so much, now we can finally be in peace'. Before you could say anything Rose and Thorn faded away with the rest tof the house.",
+            "choices": [
+                "TODO"
+            ],
+            "responses": [
+                "TODO"
+                ]
+        },
+        "False": {
+            "type": "list",
+            "name": "c7cF",
+            "message": "One must die? Well it certainly won't be you! You take the sword you found earlier, that will certainly come in handy. The first cultist does not seem fearful of the sword. As it approaches you it screeches 'I'm already dead you fool! You can't hurt me anymore!'. You try to stab the void. However, your sword seems to be unable to harm the undead cultist. The other cultists slowly move towards you as well. You desperately try to stab them but to no avail. You look around to find an escape but there is nowhere you can run to and nowhere you can hide. The last thing you see is the cultists standing above you as they impale you with your own sword. As everything goes black you hear the cultists chant 'One has died! One has di-'. It appears that yet another innocent soul has fallen victim to the Death House.",
+            "choices": [
+                "END THE GAME"
+            ],
+            "responses": [
+                "END THE GAME"
+                ]
+        }
+    },
+    "c2b":{
+        "type": "conditional",
+        "name": "c2b",
+        "conditional": {
+            "attr": "items",
+            "value": "armor",
+            "matching": "contains"
+        },
+        "True": {
+            "type": "list",
+            "name": "c2bT",
+            "message": "'I'm lucky I found this leather armor', you think to yourself. The armor protected you from being severely wounded, allowing you to climb out of the pit with only a few scuffs and bruises.",
+            "choices": [
+                "Continue walking towards the chants"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c2a"
+                }
+            ]
+        },
+        "False": {
+            "type": "list",
+            "name": "c2bF",
+            "message": "NESTED CONDITIONAL",
+            "choices": [
+                "TODO"
+            ],
+            "responses": [
+                "TODO"
+            ]
+        }
     }
 }
