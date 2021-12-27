@@ -259,15 +259,15 @@
             "responses": [
                 {
                     "chapter": "same",
-                    "hook": "c7a"
+                    "hook": "finala"
                 },
                 {
                     "chapter": "same",
-                    "hook": "c7b"
+                    "hook": "finalb"
                 }, 
                 {
                     "chapter": "same",
-                    "hook": "c7c"
+                    "hook": "c7"
                 }
             ]
         },
@@ -282,66 +282,54 @@
             "responses": [
                 {
                     "chapter": "same",
-                    "hook": "c7a"
+                    "hook": "finala"
                 }, 
                 {
                     "chapter": "same",
-                    "hook": "c7c"
+                    "hook": "c7"
                 }
             ]
         }
-    }, 
-    "c7a": {
-        "type": "list",
-        "name": "c7a",
-        "message": "You decide to appease the cult. You don't see how you will ever make it out of here alive, and quite frankly, after all you have seen in this house your life will never be the same as it was just this morning anyway. What is the point of living if you have to live with these terrors haunting you? You see no other option but to end it right here right now, before they get a chance to end it for you, which will presumably be much more painful. You take your sword and stab yourself in the heart, giving the cult exactly what they want. The cult is appeased. The chants change to 'One has died! One has di-'. That is all you can hear before everything goes dark. It appears that yet another soul has fallen victim to the Death House.",
-        "choices": [
-            "END THE GAME"
-        ],
-        "responses": [
-            "END THE GAME"
-        ]
-    }, 
-    "c7b": {
-        "type": "list",
-        "name": "c7b",
-        "message": "You decide to appease the cult. One must die and it certainly won't be you! You grab your sword and cut little baby Walter's throat, giving the cult what they want. The cult is appeased. The chants change to 'One has died! One has followed!'. 'Followed?!' you think to yourself. When looking down you notice you are now also wearing a black robe, except yours is covered in the blood of Walter. But.. the blood continues to soak your robe. That is when you realize that it is your blood soaking the robe. The cultists slowly move towards you. There is nowhere you can run to, nowhere you can hide. The chant changes again to 'Blessed are the followers, for they shall be eaten first. Blessed are the followers for they shall be eaten first. Blessed are the followers, for they shall be eaten f-''. That is all you can hear before everything goes dark. It appears that yet another soul has fallen victim to the Death House.",
-        "choices": [
-            "END THE GAME"
-        ],
-        "responses": [
-            "END THE GAME"
-        ]
     },
-    "c7c": {
+    "finala": {
+        "type": "endpoint",
+        "message": "You decide to appease the cult. You don't see how you will ever make it out of here alive, and quite frankly, after all you have seen in this house your life will never be the same as it was just this morning anyway. What is the point of living if you have to live with these terrors haunting you? You see no other option but to end it right here right now, before they get a chance to end it for you, which will presumably be much more painful. You take your sword and stab yourself in the heart, giving the cult exactly what they want. The cult is appeased. The chants change to 'One has died! One has di-'. That is all you can hear before everything goes dark. It appears that yet another soul has fallen victim to the Death House."
+    },
+    "finalb": {
+        "type": "endpoint",
+        "message": "You decide to appease the cult. One must die and it certainly won't be you! You grab your sword and cut little baby Walter's throat, giving the cult what they want. The cult is appeased. The chants change to 'One has died! One has followed!'. 'Followed?!' you think to yourself. When looking down you notice you are now also wearing a black robe, except yours is covered in the blood of Walter. But.. the blood continues to soak your robe. That is when you realize that it is your blood soaking the robe. The cultists slowly move towards you. There is nowhere you can run to, nowhere you can hide. The chant changes again to 'Blessed are the followers, for they shall be eaten first. Blessed are the followers for they shall be eaten first. Blessed are the followers, for they shall be eaten f-''. That is all you can hear before everything goes dark. It appears that yet another soul has fallen victim to the Death House."
+    },
+    "c7": {
         "type": "conditional",
-        "name": "c7c",
+        "name": "c7",
         "conditional": {
             "attr": "items",
             "value": "sword",
             "matching": "contains"
         },
         "True": {
-            "type": "list",
-            "name": "c7cT",
-            "message": "One must die? Well it certainly won't be you! You remember your sword was extra powerful on undead creatures, which is exactly what these cultists appear to be. You take your sword. The first cultist does not seem fearful of the sword. As it approaches you it screeches 'I'm already dead you fool! You can't hurt me anymo-'. Before it can finish it's sentence you stab the void. It vanishes with a loud howl, leaving only a robe behind. The other cultists chant 'One has died! One has died!' asthey slowly disappear one by one. 'One has died! One has died! One has died!'. As the cultists vanished, so did their chants. You are left alone in the chamber as you defeated the monster: the priests of Osybus. As you relish in your victory the house starts to change. Everything seems to fall apart. Planks rot under your feet, walls collapse right in front of you. You run back through the basement and climb up the ladder, you have to escape before it all collapses! As you run through the house you see the wallpapers start to decay and valuables start to rot. Whatever curse preserved this house is now broken and everything is falling apart quickly. You eventually find your way back to the front doors, which are now rotten and the stained glass is shattered. Just as you leave the house the entire building starts to collapse, destroying everything left inside it. You look down and see little Rose and Thorn standing in front of you. 'You did it!' squealed Rose. 'You slayed the monster! thank you so much, now we can finally be in peace'. Before you could say anything Rose and Thorn faded away with the rest tof the house.",
-            "choices": [
-                "TODO"
-            ],
-            "responses": [
-                "TODO"
-                ]
+            "type": "conditional",
+            "name": "c7T",
+            "conditional": {
+                "attr": "people",
+                "value": "walter",
+                "matching": "contains"
+            },
+            "True": {
+                "type": "endpoint",
+                "name": "c7TT",
+                "message": "One must die? Well it certainly won't be you! You remember your sword was extra powerful on undead creatures, which is exactly what these cultists appear to be. You take your sword. The first cultist does not seem fearful of the sword. As it approaches you it screeches 'I'm already dead you fool! You can't hurt me anymo-'. Before it can finish it's sentence you stab the void. It vanishes with a loud howl, leaving only a robe behind. The other cultists chant 'One has died! One has died!' asthey slowly disappear one by one. 'One has died! One has died! One has died!'. As the cultists vanished, so did their chants. You are left alone in the chamber as you defeated the monster: the priests of Osybus. As you relish in your victory the house starts to change. Everything seems to fall apart. Planks rot under your feet, walls collapse right in front of you. You run back through the basement and climb up the ladder, you have to escape before it all collapses! As you run through the house you see the wallpapers start to decay and valuables start to rot. Whatever curse preserved this house is now broken and everything is falling apart quickly. You eventually find your way back to the front doors, which are now rotten and the stained glass is shattered. Just as you leave the house the entire building starts to collapse, destroying everything left inside it. You look down and see little Rose and Thorn standing in front of you. 'You did it!' squealed Rose. 'You slayed the monster! thank you so much, now we can finally be in peace'. Before you could say anything Rose and Thorn faded away with the rest tof the house. You look down at the swaddled baby you had saved from the house. As you push aside the swaddling blanket to check if Walter is okay, you do not find the little baby you picked up. Instead, you find a small baby sized skeleton. You jump back in fear, dropping the swaddled skeleton to the ground. The moment he touches the ground the skeleton pulverizes into ash. Baby Walter must also have been kept alive by the same curse that preserved the house, which would explain why he was able to live there for who knows how many years after his family had died. You fall to the ground trying to process what had happened just now, let alone process what had happened today altogether. You hardly feel like the same person you were earlier today when you woke up alone on the same gravel road you are on right now."
+            },
+            "False": {
+                "type": "endpoint",
+                "name": "c7TF",
+                "message": "One must die? Well it certainly won't be you! You remember your sword was extra powerful on undead creatures, which is exactly what these cultists appear to be. You take your sword. The first cultist does not seem fearful of the sword. As it approaches you it screeches 'I'm already dead you fool! You can't hurt me anymo-'. Before it can finish it's sentence you stab the void. It vanishes with a loud howl, leaving only a robe behind. The other cultists chant 'One has died! One has died!' asthey slowly disappear one by one. 'One has died! One has died! One has died!'. As the cultists vanished, so did their chants. You are left alone in the chamber as you defeated the monster: the priests of Osybus. As you relish in your victory the house starts to change. Everything seems to fall apart. Planks rot under your feet, walls collapse right in front of you. You run back through the basement and climb up the ladder, you have to escape before it all collapses! As you run through the house you see the wallpapers start to decay and valuables start to rot. Whatever curse preserved this house is now broken and everything is falling apart quickly. You eventually find your way back to the front doors, which are now rotten and the stained glass is shattered. Just as you leave the house the entire building starts to collapse, destroying everything left inside it. You look down and see little Rose and Thorn standing in front of you. 'You did it!' squealed Rose. 'You slayed the monster! thank you so much, now we can finally be in peace'. Before you could say anything Rose and Thorn faded away with the rest tof the house. You fall to the ground trying to process what had happened just now, let alone process what had happened today altogether. You hardly feel like the same person you were earlier today when you woke up alone on the same gravel road you are on right now."
+            }
         },
         "False": {
-            "type": "list",
-            "name": "c7cF",
-            "message": "One must die? Well it certainly won't be you! You take the sword you found earlier, that will certainly come in handy. The first cultist does not seem fearful of the sword. As it approaches you it screeches 'I'm already dead you fool! You can't hurt me anymore!'. You try to stab the void. However, your sword seems to be unable to harm the undead cultist. The other cultists slowly move towards you as well. You desperately try to stab them but to no avail. You look around to find an escape but there is nowhere you can run to and nowhere you can hide. The last thing you see is the cultists standing above you as they impale you with your own sword. As everything goes black you hear the cultists chant 'One has died! One has di-'. It appears that yet another innocent soul has fallen victim to the Death House.",
-            "choices": [
-                "END THE GAME"
-            ],
-            "responses": [
-                "END THE GAME"
-                ]
+            "type": "endpoint",
+            "name": "c7F",
+            "message": "One must die? Well it certainly won't be you! You take the sword you found earlier, that will certainly come in handy. The first cultist does not seem fearful of the sword. As it approaches you it screeches 'I'm already dead you fool! You can't hurt me anymore!'. You try to stab the void. However, your sword seems to be unable to harm the undead cultist. The other cultists slowly move towards you as well. You desperately try to stab them but to no avail. You look around to find an escape but there is nowhere you can run to and nowhere you can hide. The last thing you see is the cultists standing above you as they impale you with your own sword. As everything goes black you hear the cultists chant 'One has died! One has di-'. It appears that yet another innocent soul has fallen victim to the Death House."
         }
     },
     "c2b":{
@@ -367,15 +355,32 @@
             ]
         },
         "False": {
-            "type": "list",
+            "type": "conditional",
             "name": "c2bF",
-            "message": "NESTED CONDITIONAL",
-            "choices": [
-                "TODO"
-            ],
-            "responses": [
-                "TODO"
-            ]
+            "conditional": {
+                "attr": "items",
+                "value": "potion",
+                "matching": "contains"
+            },
+            "True": {
+                "type": "list",
+                "name": "c2bFT",
+                "message": "The sharp spikes pierce your body leaving you severely wounded. You feel your body grow weaker every second as you lose increasingly more blood. You quickly search through your pockets and grab the healing potion you found earlier. It smells disgusting but at this point it is your only hope to survive. You drink the potion and everything goes black... When you wake up your wounds have disappeared without a trace and you feel energized. How long have you been asleep for? It can't have been that long, right?",
+                "choices": [
+                    "Continue walking towards the chants"
+                ],
+                "responses": [
+                    {
+                        "chapter": "same",
+                        "hook": "c2a"
+                    }
+                ]
+            },
+            "False": {
+                "type": "endpoint",
+                "name": "c2bFF",
+                "message": "The sharp spikes pierce your body leaving you severely wounded. You try to climb out of the pit but you have already lost too much blood and cannot get out. In a last attempt for help you scream for someone to help you. However, nobody reaches you in time. You feel your last breath leave your body as everything turns black. It appears that yet another innocent soul has fallen victim to the Death House."
+            }
         }
     }
 }
