@@ -5,7 +5,7 @@
         "conditional": {
             "attr": "items",
             "value": "sword",
-            "matching": "contains"
+            "comp_type": "contains"
         },
         "True": {
             "type": "list",
@@ -45,7 +45,7 @@
                 }
             ]
         }
-    }, 
+    },
     "c1a": {
         "type": "list",
         "name": "c1a",
@@ -71,7 +71,7 @@
         "conditional": {
             "attr": "people",
             "value": "rose",
-            "matching": "contains"
+            "comp_type": "contains"
         },
         "True": {
             "type": "list",
@@ -101,7 +101,7 @@
                 }
             ]
         }
-    }, 
+    },
     "c1c": {
         "type": "list",
         "name": "c1c",
@@ -120,7 +120,7 @@
                 "hook": "c2a"
             }
         ]
-    }, 
+    },
     "c2a": {
         "type": "list",
         "name": "c2a",
@@ -139,7 +139,7 @@
                 "hook": "c3b"
             }
         ]
-    }, 
+    },
     "c3b": {
         "type": "list",
         "name": "c3b",
@@ -153,7 +153,7 @@
                 "hook": "root"
             }
         ]
-    }, 
+    },
     "c3a": {
         "type": "list",
         "name": "c3a",
@@ -179,14 +179,14 @@
         "conditional": {
             "attr": "rooms",
             "value": "secretroom",
-            "matching": "contains"
+            "comp_type": "contains"
         },
         "True": {
             "type": "list",
             "name": "c4a",
             "message": "You also think back to the rituals from the cult called the Priests of Osybus. Were these cultists active in this basement? Do they have something to do with the monster perhaps? From the reliquary you see a door to the ritual chamber. Do you dare to enter?",
             "choices": [
-                "Enter the ritual chamber", 
+                "Enter the ritual chamber",
                 "Find your way back to the trapdoor upstairs"
             ],
             "responses": [
@@ -205,7 +205,7 @@
             "name": "c4b",
             "message": "From the reliquary you see a door to the ritual chamber. Do you dare to enter?",
             "choices": [
-                "Enter the ritual chamber", 
+                "Enter the ritual chamber",
                 "Find your way back to the trapdoor upstairs"
             ],
             "responses": [
@@ -219,7 +219,7 @@
                 }
             ]
         }
-    }, 
+    },
     "c5": {
         "type": "list",
         "name": "c5",
@@ -245,7 +245,7 @@
         "conditional": {
             "attr": "people",
             "value": "walter",
-            "matching": "contains"
+            "comp_type": "contains"
         },
         "True": {
             "type": "list",
@@ -253,7 +253,7 @@
             "message": "You investigate the room. As you walk around you feel drawn to the dais. The moment you step on the top of the dais the chanting rises once more. Thirteen dark apparitions appear on the ledges overlooking the room. Each one resembles a black-robed figure holding a torch, but the torches fire is black and seems to draw light into it. Where you expect to see faces are voids. 'One must die!' they chant, over and over. 'One must die! One must die!'.",
             "choices": [
                 "Kill yourself",
-                "Kill baby Walter", 
+                "Kill baby Walter",
                 "Try to kill them"
             ],
             "responses": [
@@ -264,7 +264,7 @@
                 {
                     "chapter": "same",
                     "hook": "finalb"
-                }, 
+                },
                 {
                     "chapter": "same",
                     "hook": "c7"
@@ -283,7 +283,7 @@
                 {
                     "chapter": "same",
                     "hook": "finala"
-                }, 
+                },
                 {
                     "chapter": "same",
                     "hook": "c7"
@@ -305,7 +305,7 @@
         "conditional": {
             "attr": "items",
             "value": "sword",
-            "matching": "contains"
+            "comp_type": "contains"
         },
         "True": {
             "type": "conditional",
@@ -313,7 +313,7 @@
             "conditional": {
                 "attr": "people",
                 "value": "walter",
-                "matching": "contains"
+                "comp_type": "contains"
             },
             "True": {
                 "type": "endpoint",
@@ -332,13 +332,13 @@
             "message": "One must die? Well it certainly won't be you! You take the sword you found earlier, that will certainly come in handy. The first cultist does not seem fearful of the sword. As it approaches you it screeches 'I'm already dead you fool! You can't hurt me anymore!'. You try to stab the void. However, your sword seems to be unable to harm the undead cultist. The other cultists slowly move towards you as well. You desperately try to stab them but to no avail. You look around to find an escape but there is nowhere you can run to and nowhere you can hide. The last thing you see is the cultists standing above you as they impale you with your own sword. As everything goes black you hear the cultists chant 'One has died! One has di-'. It appears that yet another innocent soul has fallen victim to the Death House."
         }
     },
-    "c2b":{
+    "c2b": {
         "type": "conditional",
         "name": "c2b",
         "conditional": {
             "attr": "items",
             "value": "armor",
-            "matching": "contains"
+            "comp_type": "contains"
         },
         "True": {
             "type": "list",
@@ -360,7 +360,7 @@
             "conditional": {
                 "attr": "items",
                 "value": "potion",
-                "matching": "contains"
+                "comp_type": "contains"
             },
             "True": {
                 "type": "list",

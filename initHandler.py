@@ -2,7 +2,10 @@ from __future__ import print_function, unicode_literals
 import json
 from os import path, getcwd, listdir, mkdir
 from whaaaaat import prompt
-from util import style, init_state, Keys, state_path
+from util import style, init_state, state_path
+from enums import STATE_KEYS
+
+ROOMS, PEOPLE, CHAP, CHECKP, ITEMS, CHR_NAME = STATE_KEYS
 
 
 def get_init_state():
@@ -21,9 +24,9 @@ def get_init_state():
                       for file_path in saveState_files]
 
         # extract info from saved state
-        content = [str({Keys.CHAP.value: saveState[Keys.CHAP.value],
-                        Keys.CHECKP.value: saveState[Keys.CHECKP.value],
-                        Keys.NAME.value: saveState[Keys.CHR_NAME.value]}) for saveState in saveStates]
+        content = [str({CHAP.value: saveState[CHAP.value],
+                        CHECKP.value: saveState[CHECKP.value],
+                        "name": saveState[CHR_NAME.value]}) for saveState in saveStates]
 
         # prompt user to to choose an old saved state or start new game
         prompt_name = "loadstate_prompt"
@@ -43,7 +46,7 @@ def get_init_state():
         # fill state based on choice
         else:
             # get index of chosen save state
-            an_idx = load_prompt[Keys.CHOICES.value].index(ans[prompt_name])
+            an_idx = load_prompt["choices"].index(ans[prompt_name])
             state = saveStates[an_idx]
     else:
         state = init_state

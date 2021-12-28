@@ -27,7 +27,7 @@
                 "hook": "c2"
             },
             {
-                "chapter":"same",
+                "chapter": "same",
                 "hook": "c1"
             }
         ]
@@ -51,7 +51,7 @@
         "name": "c3",
         "message": "Mounted on the wall above the fireplace is a longsword with a windmill cameo worked into the hilt. The wood-paneled walls are ornately sculptured with images of vines, flowers, nymphs, and satyrs. You also see a door.",
         "choices": [
-            "Take the sword", 
+            "Take the sword",
             "Enter through the door",
             "Inspect the images on the walls"
         ],
@@ -59,7 +59,7 @@
             {
                 "chapter": "same",
                 "hook": "c4a"
-            }, 
+            },
             {
                 "chapter": "same",
                 "hook": "c4b"
@@ -90,29 +90,29 @@
         "name": "c4b",
         "message": "You enter an oak-paneled room that looks like a hunter's den. Mounted above the fireplace is a stag's head, and positioned around the outskirts of the room are three stuffed wolfs. Two padded chairs draped in animal furs face the hearth, with an oak table between them supporting the cask of wine, two carved wooden goblets, a pike rack, and a candelabrum. A chandelier hangs above a cloth-covered table surrounded by four chairs. Two cabinets stand against the walls. The left cabinet is locked. The right cabinet is not locked. From this room you can return to the main hall, go to the kitchen, or go to the hall.",
         "choices": [
-            "Go to the main hall", 
-            "Attempt to open the left cabinet", 
-            "Open the right cabinet", 
-            "Go to the kitchen", 
+            "Go to the main hall",
+            "Attempt to open the left cabinet",
+            "Open the right cabinet",
+            "Go to the kitchen",
             "Go to the hall"
         ],
         "responses": [
             {
                 "chapter": "same",
                 "hook": "c2"
-            }, 
+            },
             {
                 "chapter": "same",
                 "hook": "c4b"
-            }, 
+            },
             {
                 "chapter": "same",
                 "hook": "c4d"
-            }, 
+            },
             {
                 "chapter": "chapter2",
                 "hook": "root"
-            }, 
+            },
             {
                 "chapter": "chapter3",
                 "hook": "root"
@@ -124,7 +124,7 @@
         "name": "c4c",
         "message": "You see nothing of interest on the walls, just beautiful carvings.",
         "choices": [
-            ""
+            "..."
         ],
         "responses": [
             {
@@ -138,24 +138,24 @@
         "name": "c4d",
         "message": "The cabinet holds a small deck of playing cars and an assortment of wine glasses. You also found a healing potion. You now have a healing potion.",
         "choices": [
-            "Go to the main hall", 
-            "Attempt to open the left cabinet", 
-            "Go to the kitchen", 
+            "Go to the main hall",
+            "Attempt to open the left cabinet",
+            "Go to the kitchen",
             "Go to the hall"
         ],
         "responses": [
             {
                 "chapter": "same",
                 "hook": "c2"
-            }, 
+            },
             {
                 "chapter": "same",
                 "hook": "c4d"
-            }, 
+            },
             {
                 "chapter": "chapter2",
                 "hook": "root"
-            }, 
+            },
             {
                 "chapter": "chapter3",
                 "hook": "root"

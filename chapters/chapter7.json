@@ -24,7 +24,7 @@
         "conditional": {
             "attr": "items",
             "value": "key",
-            "matching": "contains"
+            "comp_type": "contains"
         },
         "True": {
             "type": "list",
@@ -69,7 +69,7 @@
                 }
             ]
         }
-    }, 
+    },
     "c3a": {
         "type": "list",
         "name": "c3a",
@@ -83,13 +83,13 @@
                 "hook": "c1a"
             }
         ]
-    }, 
+    },
     "c3b": {
         "type": "list",
         "name": "c3b",
         "message": "You walk into the storage room. This dusty chamber is packed with old furniture all draped in dusty white sheets. Near an iron stove, underneath one of the sheets, is an wooden trunk containing the skeletal remains of the family's nursemaid, wrapped in a tattered bedsheet stained with blood. A knife still impales the skeleton.",
         "choices": [
-            "Inspect the corpse", 
+            "Inspect the corpse",
             "Return to the hall"
         ],
         "responses": [
@@ -102,7 +102,7 @@
                 "hook": "c1a"
             }
         ]
-    }, 
+    },
     "c4a": {
         "type": "list",
         "name": "c4a",
@@ -116,7 +116,7 @@
                 "hook": "c1a"
             }
         ]
-    }, 
+    },
     "c3c": {
         "type": "list",
         "name": "c3c",
