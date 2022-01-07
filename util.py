@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 from enums import STATE_KEYS
 
-MAX_SAVED = 3
+MAX_SAVED = 10
 
 question_dir = path.join(getcwd(), "chapters")
 state_path = path.join(getcwd(), "saveStates")
