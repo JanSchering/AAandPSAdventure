@@ -48,7 +48,7 @@
     },
     "c3": {
         "type": "conditional",
-        "name": "c1a",
+        "name": "c3",
         "conditional": {
             "attr": "items",
             "value": "sword",
@@ -116,7 +116,7 @@
     },
     "c4b": {
         "type": "conditional",
-        "name": "c1a",
+        "name": "c4",
         "conditional": {
             "attr": "items",
             "value": "potion",
