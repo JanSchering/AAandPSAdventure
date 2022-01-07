@@ -1,26 +1,7 @@
 {
     "root": {
-        "type": "list",
-        "name": "root",
-        "message": "You push at the location where you just saw an outline of a secret door. It pushes open easily to reveal a cobweb-filled woorden staircase leading up to the attic",
-        "choices": [
-            "Go to the attic",
-            "Stay in the hall"
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "c1a"
-            },
-            {
-                "chapter": "same",
-                "hook": "c1b"
-            }
-        ]
-    },
-    "c1a": {
         "type": "conditional",
-        "name": "c1a",
+        "name": "root",
         "conditional": {
             "attr": "items",
             "value": "key",
@@ -28,7 +9,7 @@
         },
         "True": {
             "type": "list",
-            "name": "c1aT",
+            "name": "root",
             "message": "You walk up the stairs to the attic. At the top of the stairs is a door. it is locked. You remembered you found a key in the library, could it be for this door? You take the keyout of your pocket and try to open the door. It works! The door opens to reveal another hall. You step into the hall. This hall has doors to the spare bedroom, a storage room, and a children's room.",
             "choices": [
                 "Enter spare bedroom",
@@ -57,7 +38,7 @@
         },
         "False": {
             "type": "list",
-            "name": "c1aF",
+            "name": "root",
             "message": "You walk up the stairs to the attic. At the top of the stairs is a door. it is locked. You try to open the door but the lock won't break. Maybe you can find a key somewhere?",
             "choices": [
                 "Return to the Hall"
@@ -80,7 +61,7 @@
         "responses": [
             {
                 "chapter": "same",
-                "hook": "c1a"
+                "hook": "root"
             }
         ]
     },
@@ -99,7 +80,7 @@
             },
             {
                 "chapter": "same",
-                "hook": "c1a"
+                "hook": "root"
             }
         ]
     },
@@ -113,7 +94,7 @@
         "responses": [
             {
                 "chapter": "same",
-                "hook": "c1a"
+                "hook": "root"
             }
         ]
     },
@@ -127,7 +108,7 @@
         "responses": [
             {
                 "chapter": "same",
-                "hook": "c1a"
+                "hook": "root"
             }
         ]
     }

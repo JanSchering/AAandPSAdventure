@@ -36,8 +36,10 @@ while True:
     if cur_sec[TYPE.value] == ENDP.value:
         print(cur_sec[MSG.value])
         break
+
+
     # if reached a conditional point, check condition and retrieve the valid prompt
-    elif cur_sec[TYPE.value] == COND.value:
+    while cur_sec[TYPE.value] == COND.value:
         condition_info = cur_sec[COND.value]
         # Get key of the attribute to check
         attr = condition_info[ATTR.value]

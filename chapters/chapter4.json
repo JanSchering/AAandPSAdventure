@@ -137,118 +137,57 @@
             "comp_type": "contains"
         },
         "True": {
-            "type": "conditional",
+            "type": "list",
             "name": "c3",
-            "conditional": {
-                "attr": "items",
-                "value": "betterSword",
-                "comp_type": "contains"
-            },
-            "True": {
-                "type": "list",
-                "name": "c3",
-                "message": "You enter the secret room. This room contains bookshelves packed with tomes describing different rituals of a cult called the Priests of Osybus. Do they have something to do with this strange house? In the center of the room lies a heavy wooden chest with its lid half-closed. Sticking out of the chest is a skeleton in leather armor.",
-                "choices": [
-                    "Leave the secret room",
-                    "Read about The Priests of Osybus"
-                ],
-                "responses": [
-                    {
-                        "chapter": "same",
-                        "hook": "c7"
-                    }, 
-                    {
-                        "chapter": "same",
-                        "hook": "c4"
-                    }
-                ]
-            },
-            "False": {
-                "type": "list",
-                "name": "c3",
-                "message": "You enter the secret room. This room contains bookshelves packed with tomes describing different rituals of a cult called the Priests of Osybus. Do they have something to do with this strange house? In the center of the room lies a heavy wooden chest with its lid half-closed. Sticking out of the chest is a skeleton in leather armor.",
-                "choices": [
-                    "Look inside the chest",
-                    "Leave the secret room",
-                    "Read about The Priests of Osybus"
-                ],
-                "responses": [
-                    {
-                        "chapter": "same",
-                        "hook": "c6"
-                    }, 
-                    {
-                        "chapter": "same",
-                        "hook": "c7"
-                    }, 
-                    {
-                        "chapter": "same",
-                        "hook": "c4"
-                    }
-                ]
-            }
+            "message": "You enter the secret room. This room contains bookshelves packed with tomes describing different rituals of a cult called the Priests of Osybus. Do they have something to do with this strange house? In the center of the room lies a heavy wooden chest with its lid half-closed. Sticking out of the chest is a skeleton in leather armor.",
+            "choices": [
+                "Look inside the chest",
+                "Leave the secret room",
+                "Read about The Priests of Osybus"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c6"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c7"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c4"
+                }
+            ]
         },
         "False": {
-            "type": "conditional",
+            "type": "list",
             "name": "c3",
-            "conditional": {
-                "attr": "items",
-                "value": "betterSword",
-                "comp_type": "contains"
-            },
-            "True": {
-                "type": "list",
-                "name": "c3",
-                "message": "You enter the secret room. This room contains bookshelves packed with tomes describing different rituals of a cult called the Priests of Osybus. Do they have something to do with this strange house? In the center of the room lies a heavy wooden chest with its lid half-closed. Sticking out of the chest is a skeleton in leather armor.",
-                "choices": [
-                    "Look at the leather armor",
-                    "Leave the secret room",
-                    "Read about The Priests of Osybus"
-                ],
-                "responses": [
-                    {
-                        "chapter": "same",
-                        "hook": "c5"
-                    }, 
-                    {
-                        "chapter": "same",
-                        "hook": "c7"
-                    }, 
-                    {
-                        "chapter": "same",
-                        "hook": "c4"
-                    }
-                ]
-            },
-            "False": {
-                "type": "list",
-                "name": "c3",
-                "message": "You enter the secret room. This room contains bookshelves packed with tomes describing different rituals of a cult called the Priests of Osybus. Do they have something to do with this strange house? In the center of the room lies a heavy wooden chest with its lid half-closed. Sticking out of the chest is a skeleton in leather armor.",
-                "choices": [
-                    "Look at the leather armor",
-                    "Look inside the chest",
-                    "Leave the secret room",
-                    "Read about The Priests of Osybus"
-                ],
-                "responses": [
-                    {
-                        "chapter": "same",
-                        "hook": "c5"
-                    }, 
-                    {
-                        "chapter": "same",
-                        "hook": "c6"
-                    }, 
-                    {
-                        "chapter": "same",
-                        "hook": "c7"
-                    }, 
-                    {
-                        "chapter": "same",
-                        "hook": "c4"
-                    }
-                ]
-            }
+            "message": "You enter the secret room. This room contains bookshelves packed with tomes describing different rituals of a cult called the Priests of Osybus. Do they have something to do with this strange house? In the center of the room lies a heavy wooden chest with its lid half-closed. Sticking out of the chest is a skeleton in leather armor.",
+            "choices": [
+                "Look at the leather armor",
+                "Look inside the chest",
+                "Leave the secret room",
+                "Read about The Priests of Osybus"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c5"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c6"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c7"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c4"
+                }
+            ]
         }
     },
     "c4": {
@@ -281,27 +220,50 @@
         ]
     }, 
     "c6": {
-        "type": "list",
-        "name": "c5a",
-        "message": "You peek inside the chest and find a magical sword. This longsword kills enemies quicker and hurts undead creatures more than regular swords.",
-        "choices": [
-            "Take the sword", 
-            "Leave the sword"
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "c6a"
-            }, 
-            {
-                "chapter": "same",
-                "hook": "c6b"
-            }
-        ]
+        "type": "conditional",
+        "name": "c6",
+        "conditional": {
+            "attr": "items",
+            "value": "longSword",
+            "comp_type": "contains"
+        },
+        "True": {
+            "type": "list",
+            "name": "c6",
+            "message": "The chest is empty.",
+            "choices": [
+                "Continue looking around the room"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c3"
+                }
+            ]
+        },
+        "False": {
+            "type": "list",
+            "name": "c6",
+            "message": "You peek inside the chest and find a magical sword. This longsword kills enemies quicker and hurts undead creatures more than regular swords.",
+            "choices": [
+                "Take the sword", 
+                "Leave the sword"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c6a"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c6b"
+                }
+            ]
+        }
     }, 
     "c6a": {
         "type": "list",
-        "item": "betterSword",
+        "item": "longSword",
         "name": "c6a",
         "message": "Now that you have the magic sword you feel better equipped to deal with a monster. What do you do next?",
         "checkpoint": "Picked up the longsword from the hidden room",

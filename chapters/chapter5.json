@@ -100,68 +100,84 @@
         ]
     }, 
     "c1d": {
-        "type": "list",
+        "type": "conditional",
         "name": "c1d",
-        "message": "Dust and cobwebs shroud an elegantly appointed bedroom and and adjoining nursery. Double doors set with panes of stained glass pull open to reveal a balcony area overlooking the front of the house. The bedroom contans a large bed, two end tables, and an empty wardrobe, Mounted on the wall next to the wardrobe is a full-length mirror with an ornate wooden frame carved to look like ivy and berries. The nursery contains a crib covered in hanging black shroud. You part the shroud and see a baby lying in the crib. As soon as it sees you it flails with its arms and cries for help. It wears a little bracelet that says 'Walter'. 'That must be your name' you think to yourself.",
-        "choices": [
-            "Inspect the walls", 
-            "Save Walter"
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "c2b"
-            }, 
-            {
-                "chapter": "same",
-                "hook": "c2c"
-            }
-        ]
+        "conditional": {
+            "attr": "items",
+            "value": "walter",
+            "comp_type": "contains"
+        },
+        "True": {
+            "type": "list",
+            "name": "c1d",
+            "message": "Dust and cobwebs shroud an elegantly appointed bedroom and and adjoining nursery. Double doors set with panes of stained glass pull open to reveal a balcony area overlooking the front of the house. The bedroom contans a large bed, two end tables, and an empty wardrobe, Mounted on the wall next to the wardrobe is a full-length mirror with an ornate wooden frame carved to look like ivy and berries. The nursery contains a crib covered in hanging black shroud. You part the shroud and see a baby lying in the crib. As soon as it sees you it flails with its arms and cries for help. It wears a little bracelet that says 'Walter'. 'That must be your name' you think to yourself.",
+            "choices": [
+                "Inspect the walls",
+                "Return to the hall"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c2b"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "root"
+                }
+            ]
+        },
+        "False": {
+            "type": "list",
+            "name": "c1d",
+            "message": "Dust and cobwebs shroud an elegantly appointed bedroom and and adjoining nursery. Double doors set with panes of stained glass pull open to reveal a balcony area overlooking the front of the house. The bedroom contans a large bed, two end tables, and an empty wardrobe, Mounted on the wall next to the wardrobe is a full-length mirror with an ornate wooden frame carved to look like ivy and berries. The nursery contains a crib covered in hanging black shroud. You part the shroud and see a baby lying in the crib. As soon as it sees you it flails with its arms and cries for help. It wears a little bracelet that says 'Walter'. 'That must be your name' you think to yourself.",
+            "choices": [
+                "Inspect the walls", 
+                "Save Walter",
+                "Return to the hall"
+            ],
+            "responses": [
+                {
+                    "chapter": "same",
+                    "hook": "c2b"
+                }, 
+                {
+                    "chapter": "same",
+                    "hook": "c2c"
+                },
+                {
+                    "chapter": "same",
+                    "hook": "root"
+                }
+            ]
+        }
     }, 
     "c2b": {
         "type": "list",
         "name": "c2b",
         "message": "You look closer at the walls. Among the carved berries you also see carved eyeballs. After looking at the walls you look at Walter again.",
         "choices": [
-            "Save Walter", 
-            "Leave him there"
+            "Continue looking at the room"
         ],
         "responses": [
             {
                 "chapter": "same",
-                "hook": "c2c"
-            }, 
-            {
-                "chapter": "same",
-                "hook": "c3a"
-            }
-        ]
-    }, 
-    "c3a": {
-        "type": "list",
-        "name": "c3a",
-        "message": "Kidnapping a child seems like a bad thing to do, even if it might save the poor boy. You decide to leave him laying there in his crib.",
-        "choices": [
-            "Return to the hall"
-        ],
-        "responses": [
-            {
-                "chapter": "same",
-                "hook": "root"
+                "hook": "c1d"
             }
         ]
     }, 
     "c2c": {
         "type": "list",
+        "item": "walter",
         "name": "c2c",
         "message": "You pick up the crying baby. What type of parents would abandon their baby like this?! 'There there, it's okay. You're safe with me Walter. I'll get you out of  here and back to your siblings' you shush. You think to yourself how the baby does not resemble their siblings Rose and Thorn at all, almost as if they might just be half siblings. You decide to return to the hall, now carrying little baby Walter.",
         "choices": [
-            "Return to the hall"
+            "Continue looking at the room"
         ],
+        "checkpoint": "Picked up baby Walter",
         "responses": [
             {
                 "chapter": "same",
-                "hook": "root"
+                "hook": "c1d"
             }
         ]
     }

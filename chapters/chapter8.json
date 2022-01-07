@@ -110,6 +110,7 @@
             "Listen to the chants",
             "Continue walking towards the chants"
         ],
+        "checkpoint": "Begin exploring the basement",
         "responses": [
             {
                 "chapter": "same",
@@ -224,6 +225,7 @@
         "type": "list",
         "name": "c5",
         "message": "As soon as you set foot in the large room the chanting stops. Featureless stone pillars support the ceiling, and a breach in the west wall leads to a dark cave heaped with refuse. Murky water covers most of the floor. Stairs lead up to dry stone ledges that hug the walls. In the middle of the room, more stairs rise to form an octagonal dais that also rises above the water. Rusty chains with shackles dangle from the ceiling directly above a stone altar mounted on the dais. The altar is carved with hideous depictions of grasping ghouls and is stained with dry blood.",
+        "checkpoint": "In the ritual room, last chance to turn back",
         "choices": [
             "Investigate the room",
             "Find your way back to the trapdoor upstairs"
@@ -243,7 +245,7 @@
         "type": "conditional",
         "name": "c6",
         "conditional": {
-            "attr": "people",
+            "attr": "items",
             "value": "walter",
             "comp_type": "contains"
         },
@@ -343,7 +345,7 @@
         "True": {
             "type": "list",
             "name": "c2bT",
-            "message": "'I'm lucky I found this leather armor', you think to yourself. The armor protected you from being severely wounded, allowing you to climb out of the pit with only a few scuffs and bruises.",
+            "message": "'You become so busy listening to the chants, you forget to pay attention to any possible traps. You trip and a spike comes up from the floor. I'm lucky I found this leather armor', you think to yourself. The armor protected you from being severely wounded, allowing you to escape with only a few scuffs and bruises.",
             "choices": [
                 "Continue walking towards the chants"
             ],
@@ -365,7 +367,7 @@
             "True": {
                 "type": "list",
                 "name": "c2bFT",
-                "message": "The sharp spikes pierce your body leaving you severely wounded. You feel your body grow weaker every second as you lose increasingly more blood. You quickly search through your pockets and grab the healing potion you found earlier. It smells disgusting but at this point it is your only hope to survive. You drink the potion and everything goes black... When you wake up your wounds have disappeared without a trace and you feel energized. How long have you been asleep for? It can't have been that long, right?",
+                "message": "You become so busy listening to the chants, you forget to pay attention to any possible traps. You trip and a spike comes up from the floor. The sharp spikes pierce your body leaving you severely wounded. You feel your body grow weaker every second as you lose increasingly more blood. You quickly search through your pockets and grab the healing potion you found earlier. It smells disgusting but at this point it is your only hope to survive. You drink the potion and everything goes black... When you wake up your wounds have disappeared without a trace and you feel energized. How long have you been asleep for? It can't have been that long, right?",
                 "choices": [
                     "Continue walking towards the chants"
                 ],
@@ -379,7 +381,7 @@
             "False": {
                 "type": "endpoint",
                 "name": "c2bFF",
-                "message": "The sharp spikes pierce your body leaving you severely wounded. You try to climb out of the pit but you have already lost too much blood and cannot get out. In a last attempt for help you scream for someone to help you. However, nobody reaches you in time. You feel your last breath leave your body as everything turns black. It appears that yet another innocent soul has fallen victim to the Death House."
+                "message": "You become so busy listening to the chants, you forget to pay attention to any possible traps. You trip and a spike comes up from the floor. The sharp spikes pierce your body leaving you severely wounded. You try to leave the house but you have already lost too much blood and cannot get out. In a last attempt for help you scream for someone to help you. However, nobody reaches you in time. You feel your last breath leave your body as everything turns black. It appears that yet another innocent soul has fallen victim to the Death House."
             }
         }
     }

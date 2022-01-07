@@ -139,7 +139,7 @@
                 },
                 {
                     "chapter": "same",
-                    "hook": "c4d"
+                    "hook": "c4e"
                 },
                 {
                     "chapter": "chapter2",
@@ -169,7 +169,7 @@
                 },
                 {
                     "chapter": "same",
-                    "hook": "c4b"
+                    "hook": "c4e"
                 },
                 {
                     "chapter": "same",
@@ -209,6 +209,20 @@
             "Pick up the potion"
         ],
         "checkpoint": "Picked up the healing potion in the cabinet",
+        "responses": [
+            {
+                "chapter": "same",
+                "hook": "c4b"
+            }
+        ]
+    },
+    "c4e": {
+        "type": "list",
+        "name": "c4e",
+        "message": "You give the cabinet a good tug. Nothing happens. Ah well, some things are meant to remain mysteries.",
+        "choices": [
+            "Continue looking around kitchen"
+        ],
         "responses": [
             {
                 "chapter": "same",
