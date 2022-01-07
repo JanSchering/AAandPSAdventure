@@ -313,7 +313,7 @@
             "type": "conditional",
             "name": "c7T",
             "conditional": {
-                "attr": "people",
+                "attr": "items",
                 "value": "walter",
                 "comp_type": "contains"
             },
