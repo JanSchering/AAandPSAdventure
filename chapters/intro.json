@@ -107,7 +107,7 @@
     "intro5A": {
         "type": "list",
         "name": "intro5A",
-        "message": "'We don't know what the monster looks like, but we heard it's terrible howls' says Rose",
+        "message": "'We don't know what the monster looks like, but we heard its terrible howls' says Rose",
         "choices": [
             "Are you sure you are not just imagining the monster?"
         ],

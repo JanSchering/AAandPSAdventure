@@ -76,7 +76,7 @@
         "True": {
             "type": "list",
             "name": "c1bT",
-            "message": "When you inspect the crypts you notice that there is both a crypt for Rose and for Thorn. Neither crypts contain their remains.You think back to the small corpses you saw in the children's room. You remember the door was locked when you first got there, were they maybe locked up and forgotten about? When thinking back about seeing the children, or rather... the ghosts of the children, outside you remember how thin they looked when you first saw them. Did they perhaps die of starvation? You feel a pit in your stomach thinking about what happened in this house. Those poor children deserved better than to have such monsters as parents.",
+            "message": "When you inspect the crypts you notice that there is a crypt for Rose and for Thorn. Neither crypts contain their remains.You think back to the small corpses you saw in the children's room. You remember the door was locked when you first got there, were they maybe locked up and forgotten about? When thinking back about seeing the children, or rather... the ghosts of the children, outside you remember how thin they looked when you first saw them. Did they perhaps die of starvation? You feel a pit in your stomach thinking about what happened in this house. Those poor children deserved better than to have such monsters as parents.",
             "choices": [
                 "Go further exploring the space"
             ],
@@ -90,7 +90,7 @@
         "False": {
             "type": "list",
             "name": "c1bF",
-            "message": "When you inspect the crypts you notice that there is both a crypt for two people that you don't recognize. Neither crypts contain their remains.",
+            "message": "When you inspect the crypts you notice that there is a crypt for two people that you don't recognize. Neither crypts contain their remains.",
             "choices": [
                 "Go further exploring the space"
             ],
@@ -105,7 +105,7 @@
     "c1c": {
         "type": "list",
         "name": "c1c",
-        "message": "You continue walking through the basement. You enter the cult initiates' quarters. Here you see a wooden table and four chairs at the end of the room. To the west are four alcoves containing moldy straw pallets. The middle of the room has a large well. A wooden bucket hangs from a rope-and-pulley mechanism bolted to the crossbeams above the well. As you continue walking through the dungeon the chanting gets discerningly louder.",
+        "message": "You continue walking through the basement. You enter the cult initiates' quarters. Here you see a wooden table and four chairs at the end of the room. To the west are four alcoves containing moldy straw pallets. The middle of the room has a large well. A wooden bucket hangs from a rope-and-pulley mechanism bolted to the crossbeams above the well. As you continue walking through the dungeon the chanting gets noticeably louder.",
         "choices": [
             "Listen to the chants",
             "Continue walking towards the chants"
@@ -126,7 +126,7 @@
         "name": "c2a",
         "message": "You continue following the chants paying close attention to not fall in any traps. You enter the dining hall, which contains a plain wooden table flanked by long benches. You see human bones lying strewn on the dirt floor. As you continue walking north the chants get louder and louder. As you follow the chants you arrive at a staircase down. It is obvious to you that the chants originate from somewhere below. What do you do?",
         "choices": [
-            "Descent the stairs",
+            "Descend the stairs",
             "Find your way back to the trapdoor upstairs"
         ],
         "responses": [
@@ -157,9 +157,9 @@
     "c3a": {
         "type": "list",
         "name": "c3a",
-        "message": "You descent the stairs and follow the hall to the reliquary. The chants are so loud in this room that you can finally discern them. You can hear a dozen or so voices say over and over again 'Blessed are the followers, for they shall be eaten first'. You think back to the bones you just saw on the table. Were those the bones of these so-called followers that were eaten?",
+        "message": "You descend the stairs and follow the hall to the reliquary. The chants are loud enough in this room that you can finally make out the words. You can hear a dozen or so voices say over and over again 'Blessed are the followers, for they shall be eaten first'. You think back to the bones you just saw on the table. Were those the bones of these so-called followers that were eaten?",
         "choices": [
-            "Descent the stairs",
+            "Descend the stairs",
             "Find your way back to the trapdoor upstairs"
         ],
         "responses": [
