@@ -26,7 +26,8 @@ def get_init_state():
         # extract info from saved state
         content = [str({CHAP.value: saveState[CHAP.value],
                         CHECKP.value: saveState[CHECKP.value],
-                        "name": saveState[CHR_NAME.value]}) for saveState in saveStates]
+                        "name": saveState[CHR_NAME.value],
+                        ITEMS.value: saveState[ITEMS.value]}) for saveState in saveStates]
 
         # prompt user to to choose an old saved state or start new game
         prompt_name = "loadstate_prompt"
