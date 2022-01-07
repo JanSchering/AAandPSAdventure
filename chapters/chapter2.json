@@ -203,7 +203,7 @@
     "c3d":{
         "type": "list",
         "name": "c3d",
-        "message": "You inspect the walls closer. You see twisted faces carved into the tree trunks and wolves lurking amid the carved foliage. You feel like you looked through everything that this room has to offer, you return to the kitchen.",
+        "message": "You inspect the walls more closely. You see twisted faces carved into the tree trunks and wolves lurking amid the carved foliage. You feel like you looked through everything that this room has to offer, you return to the kitchen.",
         "choices":[
             "Return to the kitchen"
         ],
